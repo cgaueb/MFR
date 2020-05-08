@@ -30,36 +30,61 @@ their mapping to the respective applications.
 
 ## Downloads
 
-### Research Achievements (from 2015 to now)
+### Research Content
 
 **2020**
 - Evangelou I., Papaioannou G., Vardis A., Vasilakis A. A., '_Rasterization-based Progressive Photon Mapping_', _conditionally accepted_ at The Visual Computer (CGI'2020 Special Issue). <img src="Figures\new.png" width="40">
-
-- Vasilakis A. A., Vardis A., Papaioannou G., '_A Survey of Multifragment Rendering_', Computer Graphics Forum (Eurographics 2020 - STAR Papers).<br/>
-
+- Vasilakis A. A., Vardis A., Papaioannou G., '_A Survey of Multifragment Rendering_', Computer Graphics Forum (Eurographics 2020 - STAR Papers).
 <a href="Multimedia\EG2020_STAR_paper.pdf">
-<img alt="EG paper pdf" src="Figures\pdf.png" width="50">
+<img alt="EG 2020 paper pdf" src="Figures\pdf.png" width="25">
 </a>
 <a href="Multimedia\EG2020_STAR_video_presentation.pdf">
-<img alt="EG video presentation" src="Figures\video.png" width="45">
+<img alt="EG 2020 video presentation" src="Figures\video.png" width="25">
 </a>
 <a href="Multimedia\EG2020_STAR_presentation.pdf">
-<img alt="EG presentation" src="Figures\pptx.png" width="50">
+<img alt="EG 2020 presentation" src="Figures\pptx.png" width="25">
 </a>
 
 **2017**
 
 - Vasilakis A. A., Vardis A., Papaioannou G. and Moustakas K.,'_Variable k-buffer using Importance Maps_', Eurographics 2017 - Short Papers.
+<a href="Multimedia\EG2017_SP_paper.pdf">
+<img alt="EG 2017 paper pdf" src="Figures\pdf.png" width="25">
+</a>
+<a href="Multimedia\EG2017_SP_presentation.pptx">
+<img alt="EG 2017 presentation" src="Figures\pptx.png" width="25">
+</a>
 
 **2016**
 
 -  Vardis K., Vasilakis A. A., Papaioannou G., '_DIRT: Deferred Image-based Ray Tracing_', High-Performance Graphics 2016.
+<a href="Multimedia\HPG2016_paper.pdf">
+<img alt="HPG 2016 paper pdf" src="Figures\pdf.png" width="25">
+</a>
+<a href="Multimedia\HPG2016_presentation.pptx">
+<img alt="HPG 2016 presentation" src="Figures\pptx.png" width="25">
+</a>
 -  Vardis K., Vasilakis A. A., Papaioannou G., '_A Multiview and Multilayer Approach for Interactive Ray Tracing_', Interactive 3D Graphics and Games 2016.
+<a href="Multimedia\I3D2016_paper.pdf">
+<img alt="I3D 2016 paper pdf" src="Figures\pdf.png" width="25">
+</a>
+<a href="Multimedia\I3D2016_presentation.pptx">
+<img alt="I3D 2016 presentation" src="Figures\pptx.png" width="25">
+</a>
 
 **2015**
 
 -  Vasilakis A. A., Papaioannou G., Fudos I. '_k<sup>+</sup>-buffer: An efficient, memory-friendly and dynamic k-buffer framework_', IEEE TVCG, 2015.
+<a href="Multimedia\TVCG2015_paper.pdf">
+<img alt="TVCG 2015 paper pdf" src="Figures\pdf.png" width="25">
+</a>
 -  Vasilakis A. A., Papaioannou G., '_Improving k-buffer methods via Occupancy Maps_', Eurographics 2015 - Short Papers.
+<a href="Multimedia\EG2015_SP_paper.pdf">
+<img alt="EG 2015 paper pdf" src="Figures\pdf.png" width="25">
+</a>
+<a href="Multimedia\EG2015_SP_presentation.pptx">
+<img alt="EG 2015 presentation" src="Figures\pptx.png" width="25">
+</a>
 
 ### GLSL Source Code
 
