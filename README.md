@@ -13,6 +13,7 @@ The main advantage of these approaches is that they encompass additional rasteri
 ### Table of Contents
 
 - [Aim](#Aim)
+- [Pipeline](#Pipeline)
 - [Downloads](#Downloads)
 - [How to Cite](#How-to-Cite)
 
@@ -92,8 +93,9 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 
 This extensive collection includes the most widely-used multi-fragment rendering solutions such as  the depth peeling variants as well as k-buffer and A-buffer alternatives. The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
 
-<a href="Multimedia\MFR_glsl_source_code.zip">
-<img alt="MFR glsl source code" src="Figures\code.png" width="50">
+- Depth Peeling
+<a href="glsl\MFR_depth_peeling_glsl_source_code.zip">
+<img alt="Depth Peeling glsl source code" src="Figures\code.png" width="25">
 </a>
 
 ### Demos
