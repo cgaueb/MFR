@@ -107,12 +107,12 @@ This extensive collection includes the most widely-used multi-fragment rendering
 ### LaTeX and BibTeX example usage
 
 <blockquote>
-<pre style="white-space:pre-wrap; word-wrap:break-word;
-">
-In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, available at <em>'https://github.com/cgaueb/MFR'</em> repository.
+<pre style="white-space:pre-wrap;">
+In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR},
+available at <em>'https://github.com/cgaueb/MFR'</em> repository.
 </pre>
 
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
+<pre style="white-space:pre-wrap;">
 @journal{VVP_EG_2020_STAR,
     title   = {A Survey of Multifragment Rendering},
     author  = {Vasilakis, Andreas Alexandros and Vardis, Konstantinos and Papaioannou, Georgios},
@@ -125,7 +125,6 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
     url     = {TBD},
     eprint  = {TBD}
 }
-      
 </pre>
 
 </blockquote>
