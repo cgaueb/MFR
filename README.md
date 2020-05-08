@@ -33,7 +33,8 @@ their mapping to the respective applications.
 ### Research Achievements (from 2015 to now)
 
 **2020**
-- Evangelou I., Papaioannou G., Vardis A., Vasilakis A. A., '_Rasterization-based Progressive Photon Mapping_', _conditionally accepted_ at The Visual Computer (CGI'2020 Special Issue). <span style="color:green">[ new paper ] </span>
+- Evangelou I., Papaioannou G., Vardis A., Vasilakis A. A., '_Rasterization-based Progressive Photon Mapping_', _conditionally accepted_ at The Visual Computer (CGI'2020 Special Issue). <img src="Figures\new.png" width="40">
+
 - Vasilakis A. A., Vardis A., Papaioannou G., '_A Survey of Multifragment Rendering_', Computer Graphics Forum (Eurographics 2020 - STAR Papers).<br/>
 
 <a href="Multimedia\EG2020_STAR_paper.pdf">
@@ -79,11 +80,12 @@ This extensive collection includes the most widely-used multi-fragment rendering
 ### LaTeX and BibTeX example usage
 
 <blockquote>
-<pre style="white-space:pre-wrap;">
-In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR} available at <em> 'https://github.com/cgaueb/MFR'</em> repository.
+<pre style="white-space:pre-wrap; word-wrap:break-word;
+">
+In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, available at <em>'https://github.com/cgaueb/MFR'</em> repository.
 </pre>
 
-<pre style="white-space:pre-wrap;">
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
 @journal{VVP_EG_2020_STAR,
     title   = {A Survey of Multifragment Rendering},
     author  = {Vasilakis, Andreas Alexandros and Vardis, Konstantinos and Papaioannou, Georgios},
