@@ -49,9 +49,9 @@ their mapping to the respective applications.
 
 -  Vardis K., Vasilakis A. A., Papaioannou G., '_DIRT: Deferred Image-based Ray Tracing_', High-Performance Graphics 2016.
 <a href="Multimedia\HPG2016_paper.pdf"> <img alt="HPG 2016 paper pdf" src="Figures\pdf.png" width="25"> </a>
-<a href="Multimedia\HPG2016_presentation.pptx"> <img alt="HPG 2016 presentation" src="Figures\pptx.png" width="25"> </a>
+<a href="https://www.kostasvardis.com/files/research/dirt_hpg2016.pptx"> <img alt="HPG 2016 presentation" src="Figures\pptx.png" width="25"> </a>
 -  Vardis K., Vasilakis A. A., Papaioannou G., '_A Multiview and Multilayer Approach for Interactive Ray Tracing_', Interactive 3D Graphics and Games 2016. <a href="Multimedia\I3D2016_paper.pdf"> <img alt="I3D 2016 paper pdf" src="Figures\pdf.png" width="25"> </a>
-<a href="Multimedia\I3D2016_presentation.pptx"> <img alt="I3D 2016 presentation" src="Figures\pptx.png" width="25"> </a>
+<a href="https://www.kostasvardis.com/files/research/mmrt_i3d2016.pptx"> <img alt="I3D 2016 presentation" src="Figures\pptx.png" width="25"> </a>
 
 **2015**
 
