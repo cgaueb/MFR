@@ -19,11 +19,9 @@ The main advantage of these approaches is that they encompass additional rasteri
 
 ## Aim
 
-The goals of this github account are: 
-- Present formally the MFR pipeline, identifying the construction strategies, image operation categories and
-their mapping to the respective applications.
-- Offer publications and multimedia content related to the MFR research area.
-- Provide several open source projects that examine the underlying construction mechanisms of MFR solutions and their applications, ranging from order-independent transparency to global illumination. (TBD)
+The goals of this github repository are to:
+- Offer a centralised location that contains source code and examples of the MFR-related research that has been done by the [CG AUEB Group](http://graphics.cs.aueb.gr).
+- Provide a generalised MFR framework for prototyping constructions methodologies and their applications, ranging from order-independent transparency to global illumination and data visualisation. (TBD)
 
 ## Pipeline
 
@@ -60,10 +58,10 @@ their mapping to the respective applications.
 
 ### GLSL Source Code
 
-A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space, a fundamental task for many image-based and frame buffer techniques, including complex rendering effects like order-independent-transparency, CSG rendering and collision detection.
+A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided.
+This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer and A-buffer alternatives. The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
 
-This extensive collection includes the most widely-used multi-fragment rendering solutions such as  the depth peeling variants as well as k-buffer and A-buffer alternatives. The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
-
+- All ([*ZIP* file](Sources/sources.zip))
 - Depth Peeling
 <a href="glsl\MFR_depth_peeling_glsl_source_code.zip">
 <img alt="Depth Peeling glsl source code" src="Figures\code.png" width="25">
@@ -74,6 +72,7 @@ This extensive collection includes the most widely-used multi-fragment rendering
 (TBD)
 
 ## How to Cite
+The license is [MIT](LICENSE). If you use the contents of this repository for your work, pleace cite it as described below:
 
 ### LaTeX and BibTeX example usage
 
