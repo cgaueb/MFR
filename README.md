@@ -77,7 +77,7 @@ This extensive collection includes the most widely-used multi-fragment rendering
 #### Sorting
 |  Location | Description | Citation |
 |  --- | --- | --- |
-| [Sort local](Sources/MFR/shaders/source) | Sort local | [YHG*10](#[YHG*10]) | |
+| [Sort local](Sources/MFR/shaders/source) |Sort local | [YHG*10](#[YHG*10]) | |
 
 ### Demos
 
@@ -112,6 +112,8 @@ available at <em>'https://github.com/cgaueb/MFR'</em> repository.
 
 ## References
 
-<a href="[Eve01]">[Eve01] Everitt, “Interactive Order-Independent Transparency”, Tech. rep., Nvidia Corporation, 2001.</a>
+<a name="[Eve01]">[Eve01] Everitt, “Interactive Order-Independent Transparency”, Tech. rep., Nvidia Corporation, 2001.</a>
+
 <a name="[BCL*07]">[BCL*07] Bavoil et al., “Multi-fragment Effects on the GPU Using the k-buffer”, I3D, 2007.</a>
-<a name="[YHG*10]">[YHG*10] Jason C. Yang, Justin Hensley, Holger Grün, and Nicolas Thibieroz. 2010. Real-time concurrent linked list construction on the GPU. EGSR'10</a>
+
+<a name="[YHG*10]">[YHG*10] Jason C. Yang, Justin Hensley, Holger Grün, and Nicolas Thibieroz. 2010. Real-time concurrent linked list construction on the GPU. EGSR'10, DOI=[http://dx.doi.org/10.1111/j.1467-8659.2010.01725.x](http://dx.doi.org/10.1111/j.1467-8659.2010.01725.x)</a>
