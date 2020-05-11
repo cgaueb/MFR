@@ -25,7 +25,7 @@ The goals of this github repository are to:
 
 ## Pipeline
 
-(TBD)
+![MFR Application Pipeline](Figures/multifragment_pipeline.png)
 
 ## Downloads
 
