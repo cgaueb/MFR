@@ -69,7 +69,7 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 <a href="Multimedia\HPG2016_paper.pdf"> <img alt="HPG 2016 paper pdf" src="Figures\pdf.png" width="25"> </a>
 <a href="https://www.kostasvardis.com/files/research/dirt_hpg2016.pptx"> <img alt="HPG 2016 presentation" src="Figures\pptx.png" width="25"> </a>
 -  Vardis K., Vasilakis A. A., Papaioannou G., '_A Multiview and Multilayer Approach for Interactive Ray Tracing_', Interactive 3D Graphics and Games 2016. <a href="Multimedia\I3D2016_paper.pdf"> <img alt="I3D 2016 paper pdf" src="Figures\pdf.png" width="25"> </a> <a href="https://www.kostasvardis.com/files/research/mmrt_i3d2016.pptx"> <img alt="I3D 2016 presentation" src="Figures\pptx.png" width="25"> </a> <a href="https://youtu.be/0yLrVZGNFlA"> <img alt="I3D 2016 video" src="Figures\video.png" width="25"> </a>
--  Vasilakis A. A., Papaioannou G., Fudos I. '_k<sup>+</sup>-buffer: An efficient, memory-friendly and dynamic k-buffer framework_', IEEE TVCG, 2015. <a href="Multimedia\TVCG2015_paper.pdf"> <img alt="TVCG 2015 paper pdf" src="Figures\pdf.png" width="25"> </a>
+-  Vasilakis A. A., Papaioannou G., Fudos I. '_k<sup>+</sup>-buffer: An efficient, memory-friendly and dynamic k-buffer framework_', TVCG, 2015. <a href="Multimedia\TVCG2015_paper.pdf"> <img alt="TVCG 2015 paper pdf" src="Figures\pdf.png" width="25"> </a>
 -  Vasilakis A. A., Papaioannou G., '_Improving k-buffer methods via Occupancy Maps_', Eurographics 2015 - Short Papers. <a href="Multimedia\EG2015_SP_paper.pdf"> <img alt="EG 2015 paper pdf" src="Figures\pdf.png" width="25"> </a> <a href="Multimedia\EG2015_SP_presentation.pptx"> <img alt="EG 2015 presentation" src="Figures\pptx.png" width="25"> </a>
 
 ## How to Cite
@@ -103,12 +103,29 @@ available at <em>'https://github.com/cgaueb/MFR'</em> repository.
 
 ### Depth Peeling
 
-<a name="[Eve01]">[Eve01] Everitt, "Interactive Order-Independent Transparency", Tech. rep., Nvidia Corporation, 2001.</a>
-
+- <a name="[Eve01]"> [Eve01] </a>  Everitt, "Interactive Order-Independent Transparency", Tech. rep., Nvidia Corporation, 2001.
+- <a name="[BMB08]"> [BMB08] </a> Bavoil and Myers, "Order Independent Transparency with Dual Depth Peeling", Tech. rep., Nvidia Corporation, 2008.
+- <a name="[LHLW09]">[LHLW09] </a> Liu et al., "Efficient Depth Peeling via Bucket Sort", High Performance Graphics, 2009.
+- <a name="[VF13]">  [VF13] </a> Vasilakis and Fudos, "Depth-Fighting Aware Methods for Multifragment Rendering", TVCG, 2013.
+ 
 ### k-buffer
 
-<a name="[BCL*07]">[BCL*07] Bavoil et al., "Multi-fragment Effects on the GPU Using the k-buffer", I3D, 2007.</a>
+- <a name="[BCL*07]">[BCL*07] </a> Bavoil et al., "Multi-fragment Effects on the GPU Using the k-buffer", I3D, 2007.
+- <a name="[BCL*07]">[LWXW*09]</a> Liu et al., "Multi-layer depth peeling via fragment sort", CAD&CG, 2009.
+- <a name="[YYH∗12]">[YYH∗12] </a> Yu et al., "A Framework for Rendering Complex Scattering Effects on Hair", I3D, 2012.
+- <a name="[MCTB13]">[MCTB13] </a> Maule et al., "Hybrid Transparency", I3D, 2013.
+- <a name="[Sal13]"> [Sal13]  </a> Salvi, "Advances in Real-Time Rendering in Games: Pixel Synchronization: Solving old graphics problems with new data structures", SIGGRAPH Courses, 2013.
+- <a name="[Kub14]"> [Kub14]  </a> Kubish, "Order Independent Transparency In OpenGL 4.x.", GTC, 2014.
+- <a name="[VF14]">  [VF14]   </a> Vasilakis and Fudos, "k<sup>+</sup>-buffer: Fragment Synchronized k-buffer", I3D, 2014.
+- <a name="[VP15]">  [VP15]   </a> Vasilakis and Papaioannou, "Improving k-buffer Methods via Occupancy Maps", EG (Short Papers), 2015.
+- <a name="[VPF15]"> [VPF15]  </a> Vasilakis et al., "k<sup>+</sup>-buffer: An efficient, memory-friendly and dynamic k-buffer framework", TVCG, 2015.
+- <a name="[VVPM17]"> [VVPM17]  </a> Vasilakis et al., "Variable k-buffer using Importance Maps", EG (Short Papers), 2017.
 
 ### A-buffer
 
-<a name="[YHG*10]">[YHG*10] Yang et al., "Real-time concurrent linked list construction on the GPU", CGF (EGSR'10), 2010.</a>
+- <a name="[YHG*10]">[YHG*10] </a>Yang et al., "Real-time concurrent linked list construction on the GPU", CGF (EGSR'10), 2010.
+- <a name="[Cra10a]">[Cra10a] </a>Crassin, "Fast and accurate single-pass A-buffer", Blog post, 2010.
+- <a name="[Cra10b]">[Cra10b] </a>Crassin, "Linked lists of fragment pages", Blog post, 2010.
+- <a name="[VF12]">  [VF12]  </a>Vasilakis and Fudos, "S-buffer: Sparsity-aware multifragment rendering", EG (Short Papers), 2012.
+- <a name="[VVP16a]">[VVP16a] </a>Vardis et al., "A Multiview and Multilayer Approach for Interactive Ray Tracing", I3D, 2016.
+- <a name="[VVP16b]">[VVP16b] </a>Vardis et al., "DIRT: Deferred Image-based Ray Tracing", HPG, 2016.
