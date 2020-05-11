@@ -68,11 +68,6 @@ float clipViewport(vec2 P0, vec2 P1, vec4 viewport, out int viewport_exit)
 	return alpha;
 }
 
-#define ABUFFER_FACE_NO_HIT_EXIT -1
-#define ABUFFER_FACE_HIT 1	
-#define ABUFFER_FACE_NO_HIT_CONTINUE_VIEWPORT 2
-#define ABUFFER_FACE_NO_HIT_CONTINUE_NEAR_PLANE 3
-
 // Trace a view on pixel increments based on a start position and a direction
 // If a hit is found, return ABUFFER_FACE_HIT and store the newly created vertex in the out new_vertex parameter 
 // If hit is not found, return any of the other three conditions and either exit entirely (e.g. the view's far plane has been reached)
