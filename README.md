@@ -67,6 +67,18 @@ This extensive collection includes the most widely-used multi-fragment rendering
 <img alt="Depth Peeling glsl source code" src="Figures\code.png" width="25">
 </a>
 
+#### Data Structures
+|  Type | Location | Description | Citation |
+| --- | --- | --- | --- |
+| Depth Peeling | [F2B](Sources/MFR/shaders/source) | Front-to-back | [Eve01](#[Eve01]) | |
+| K-buffer | [KB](Sources/MFR/shaders/source) | K-buffer | [BCL*07](#[BCL*07]) | |
+| A-buffer | [AB-LL](Sources/MFR/shaders/source) | Linked-List | [YHG*10](#[YHG*10]) | |
+
+#### Sorting
+|  Location | Description | Citation |
+|  --- | --- | --- |
+| [Sort local](Sources/MFR/shaders/source) | Sort local | [YHG*10](#[YHG*10]) | |
+
 ### Demos
 
 (TBD)
@@ -96,5 +108,10 @@ available at <em>'https://github.com/cgaueb/MFR'</em> repository.
     eprint  = {TBD}
 }
 </pre>
-
 </blockquote>
+
+## References
+
+<a href="[Eve01]">[Eve01] Everitt, “Interactive Order-Independent Transparency”, Tech. rep., Nvidia Corporation, 2001.</a>
+<a name="[BCL*07]">[BCL*07] Bavoil et al., “Multi-fragment Effects on the GPU Using the k-buffer”, I3D, 2007.</a>
+<a name="[YHG*10]">[YHG*10] Jason C. Yang, Justin Hensley, Holger Grün, and Nicolas Thibieroz. 2010. Real-time concurrent linked list construction on the GPU. EGSR'10</a>
