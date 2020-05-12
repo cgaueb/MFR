@@ -40,13 +40,16 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 #### Data Structures
 |  Name/Location | Description | Citation |
 | ---   | ---      | ---         |
-| **Depth Peeling** ([*ZIP* file](Sources/depth_peeling.zip))||
-| [F2B](Sources/MFR/shaders/source)     | Front-to-back | [Eve01](#[Eve01]) |
+| [**Depth Peeling**](Sources/MFR/shaders/source/Depth_Peeling) ||
+| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B)     | Front-to-back | [Eve01](#[Eve01]) |
+| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)   | Dual | [BMB08](#[BMB08]) |
+<!--
 | **k-buffer** ([*ZIP* file](Sources/k-buffer.zip))||
 | [KB](Sources/MFR/shaders/source)      | K-buffer      | [BCL*07](#[BCL*07]) |
 | **A-Buffer** ([*ZIP* file](Sources/A-buffer.zip))||
 | [AB-LL](Sources/MFR/shaders/source)   | Linked-List   | [YHG*10](#[YHG*10]) |
-| **ALL** ([*ZIP* file](Sources/sources.zip))|
+| **ALL** ([*ZIP* file](Sources/sources.zip))||
+-->
 
 #### Sorting Solutions
 |  Location | Description | Citation |
@@ -59,10 +62,12 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 
 ### Research Content
 
+<!--
 - Evangelou I., Papaioannou G., Vardis K., Vasilakis A. A., '_Rasterization-based Progressive Photon Mapping_', _conditionally accepted_ at The Visual Computer (CGI'2020 Special Issue). <img src="Figures\new.png" width="40">
+-->
 - Vasilakis A. A., Vardis K., Papaioannou G., '_A Survey of Multifragment Rendering_', Computer Graphics Forum (Eurographics 2020 - STAR Papers). 
 <a href="Multimedia\EG2020_STAR_paper.pdf"> <img alt="EG 2020 paper pdf" src="Figures\pdf.png" width="25"> </a>
-<a href="Multimedia\EG2020_STAR_presentation.pdf"> <img alt="EG 2020 presentation" src="Figures\pptx.png" width="25"> </a>
+<a href="Multimedia\EG2020_STAR_presentation.pptx"> <img alt="EG 2020 presentation" src="Figures\pptx.png" width="25"> </a>
 - Vasilakis A. A., Vardis K., Papaioannou G. and Moustakas K.,'_Variable k-buffer using Importance Maps_', Eurographics 2017 - Short Papers. <a href="Multimedia\EG2017_SP_paper.pdf"> <img alt="EG 2017 paper pdf" src="Figures\pdf.png" width="25"> </a> 
 <a href="Multimedia\EG2017_SP_presentation.pptx"> <img alt="EG 2017 presentation" src="Figures\pptx.png" width="25"> </a>
 -  Vardis K., Vasilakis A. A., Papaioannou G., '_DIRT: Deferred Image-based Ray Tracing_', High-Performance Graphics 2016.
