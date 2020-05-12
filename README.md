@@ -73,7 +73,7 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 -  Vasilakis A. A., Papaioannou G., '_Improving k-buffer methods via Occupancy Maps_', Eurographics 2015 - Short Papers. <a href="Multimedia\EG2015_SP_paper.pdf"> <img alt="EG 2015 paper pdf" src="Figures\pdf.png" width="25"> </a> <a href="Multimedia\EG2015_SP_presentation.pptx"> <img alt="EG 2015 presentation" src="Figures\pptx.png" width="25"> </a>
 
 ## How to Cite
-The license is [MIT](LICENSE). If you use the contents of this repository for your work, pleace cite it as described below:
+The license is [MIT](LICENSE). If you use the contents of this repository for your work, please cite it as described below:
 
 ### LaTeX and BibTeX example usage
 
