@@ -90,8 +90,7 @@ The license is [MIT](LICENSE). If you use the contents of this repository for yo
 
 <blockquote>
 <pre style="white-space:pre-wrap;">
-In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR},
-available at <em>'https://github.com/cgaueb/MFR'</em> repository.
+In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, available at <em>'https://github.com/cgaueb/MFR'</em> repository, that implements the algorithm described in research paper~\cite{XXX}.
 </pre>
 
 <pre style="white-space:pre-wrap;">
