@@ -9,6 +9,8 @@
 //-----------------------------------------------------------------------------------------------
 // Implementation of "Front-to-back Depth Peeling" method as described in
 // "Everitt, Interactive Order-Independent Transparency, Tech. rep., Nvidia Corporation, 2001".
+//
+// [Iter][G1] -> 1st Pass (Geometry) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"

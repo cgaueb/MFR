@@ -47,8 +47,10 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 |  Name/Location | Description | Citation |
 | ---   | ---      | ---         |
 | [**Depth Peeling**](Sources/MFR/shaders/source/Depth_Peeling) ||
-| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B)     | Front-to-back | [Eve01](#[Eve01]) |
-| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)   | Dual | [BMB08](#[BMB08]) |
+| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B)     | Front-to-back    | [Eve01](#[Eve01])   |
+| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)   | Dual             | [BMB08](#[BMB08])   |
+| [BUN](Sources/MFR/shaders/source/Depth_Peeling/BUN)     | Bucket (Uniform) | [LHLW09](#[LHLW09]) |
+
 <!--
 | **k-buffer** ([*ZIP* file](Sources/k-buffer.zip))||
 | [KB](Sources/MFR/shaders/source)      | K-buffer      | [BCL*07](#[BCL*07]) |
@@ -57,10 +59,12 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | **ALL** ([*ZIP* file](Sources/sources.zip))||
 -->
 
+<!--
 #### Sorting Solutions
 |  Location | Description | Citation |
 |  --- | --- | --- |
 | [Sort local](Sources/MFR/shaders/source) |Sort local | [YHG*10](#[YHG*10]) |
+-->
 
 ### Demos
 
@@ -113,10 +117,10 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
 
 ### Depth Peeling
 
-- <a name="[Eve01]"> [Eve01] </a>  Everitt, "Interactive Order-Independent Transparency", Tech. rep., Nvidia Corporation, 2001.
-- <a name="[BMB08]"> [BMB08] </a> Bavoil and Myers, "Order Independent Transparency with Dual Depth Peeling", Tech. rep., Nvidia Corporation, 2008.
+- <a name="[Eve01]"> [Eve01]  </a> Everitt, "Interactive Order-Independent Transparency", Tech. rep., Nvidia Corporation, 2001.
+- <a name="[BMB08]"> [BMB08]  </a> Bavoil and Myers, "Order Independent Transparency with Dual Depth Peeling", Tech. rep., Nvidia Corporation, 2008.
 - <a name="[LHLW09]">[LHLW09] </a> Liu et al., "Efficient Depth Peeling via Bucket Sort", High Performance Graphics, 2009.
-- <a name="[VF13]">  [VF13] </a> Vasilakis and Fudos, "Depth-Fighting Aware Methods for Multifragment Rendering", TVCG, 2013.
+- <a name="[VF13]">  [VF13]   </a> Vasilakis and Fudos, "Depth-Fighting Aware Methods for Multifragment Rendering", TVCG, 2013.
  
 ### k-buffer
 

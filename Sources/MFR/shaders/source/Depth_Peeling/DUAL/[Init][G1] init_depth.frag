@@ -9,6 +9,8 @@
 //---------------------------------------------------------------------------------------------------------------
 // Implementation of "Dual Depth Peeling" method as described in
 // "Bavoil, Myers, Order Independent Transparency with Dual Depth Peeling, Tech. rep., Nvidia Corporation, 2008".
+//
+// [Init][G1] -> 1st Pass (Geometry) executed once at the initialization stage.
 //---------------------------------------------------------------------------------------------------------------
 
 #include "version.h"

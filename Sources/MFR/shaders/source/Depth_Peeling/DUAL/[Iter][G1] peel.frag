@@ -9,6 +9,8 @@
 //---------------------------------------------------------------------------------------------------------------
 // Implementation of "Dual Depth Peeling" method as described in
 // "Bavoil, Myers, Order Independent Transparency with Dual Depth Peeling, Tech. rep., Nvidia Corporation, 2008".
+//
+// [Iter][G1] -> 1st Pass (Geometry) executed in each iteration.
 //---------------------------------------------------------------------------------------------------------------
 
 #include "define.h"
@@ -31,6 +33,7 @@ void main()
 	float depth_near = -depth.x;
 	float depth_far	 =  depth.y;
 
+	// Initialize output buffers
 	out_frag_color_front = vec4(0.0);
 	out_frag_color_back  = vec4(0.0);
 	out_frag_depth.xy	 = vec2(-1.0f);

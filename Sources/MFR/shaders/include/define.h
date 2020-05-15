@@ -1,3 +1,11 @@
+//---------------------------------------------------------------------------------------------------------------
+// Title:   A Survey of Multifragment Rendering
+// Authors: A. A. Vasilakis*, K. Vardis*, G. Papaioannou
+// Journal: Computer Graphics Forum (Eurographics 2020 - STAR track)
+// (*These authors contributed equally to this work)
+// Copyright (c) 2020 Computer Graphics Group, Athens University of Economics & Business
+//---------------------------------------------------------------------------------------------------------------
+
 #define INTEL_ordering		0
 #define NV_interlock		0
 
@@ -22,6 +30,7 @@
 #define INSERTION_VS_SHELL	16
 
 #define KB_SIZE				8
+#define BUCKET_SIZE			8
 #define STENCIL_SIZE		((HEAP_SIZE < 32) ? HEAP_SIZE : 32)
 
 #define HISTOGRAM_SIZE		1024
