@@ -47,9 +47,10 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 |  Name/Location | Description | Citation |
 | ---   | ---      | ---         |
 | [**Depth Peeling**](Sources/MFR/shaders/source/Depth_Peeling) ||
-| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B)     | Front-to-back    | [Eve01](#[Eve01])   |
-| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)   | Dual             | [BMB08](#[BMB08])   |
-| [BUN](Sources/MFR/shaders/source/Depth_Peeling/BUN)     | Bucket (Uniform) | [LHLW09](#[LHLW09]) |
+| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B)            | Front-to-back (Forward)  | [Eve01](#[Eve01])   |
+| [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B_Deferred) | Front-to-back (Deferred) | [VF13](#[VF13])     |
+| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)          | Dual                     | [BMB08](#[BMB08])   |
+| [BUN](Sources/MFR/shaders/source/Depth_Peeling/BUN)            | Bucket (Uniform)         | [LHLW09](#[LHLW09]) |
 
 <!--
 | **k-buffer** ([*ZIP* file](Sources/k-buffer.zip))||
