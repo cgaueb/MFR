@@ -27,9 +27,15 @@ The goals of this github repository are to:
 
 ## Pipeline
 
-At a conceptual level, the complex primary visibility determination is part of a more general multifragment pipeline responsible for generating, storing, processing and evaluating information from incoming fragments. This pipeline is comprised of three main steps: _construction_, _operation_ and _image composition_, which are defined by the context of the particular _application_ in mind. The _construction_ step is responsible for generating and storing per-pixel fragments through a common rasterisation procedure. Even though _storing_ and _sorting_ are two fundamental building blocks of the construction step, the latter stage is implicitly or explicitly performed. After construction has taken place, the next step performs one or more _operations_ on the ordered fragment data structure. Finally, the _application_ accesses and exploits the fragment information stored in the MFR structure to compose the final output.
+At a conceptual level, the complex primary visibility determination is part of a more general multifragment pipeline responsible for generating, storing, processing and evaluating information from incoming fragments (Fig. 2, top). This pipeline is comprised of three main steps: _construction_, _operation_ and _image composition_, which are defined by the context of the particular _application_ in mind. The _construction_ step is responsible for generating and storing per-pixel fragments through a common rasterisation procedure. Even though _storing_ and _sorting_ are two fundamental building blocks of the construction step, the latter stage is implicitly or explicitly performed. After construction has taken place, the next step performs one or more _operations_ on the ordered fragment data structure. Finally, the _application_ accesses and exploits the fragment information stored in the MFR structure to compose the final output (Fig. 2, bottom).
 
-![MFR Application Pipeline](Figures/multifragment_pipeline.png)
+<p align="center">
+  <img src="Figures/multifragment_pipeline.png">
+</p>
+
+**Figure 2.** Diagram of building an application using the MFR pipeline (top). For example, Order-independent transparency requires the sorting of an arbitrary sequence of out-of-order fragments before alpha
+compositing them in a linear traversal fashion (bottom).
+
 
 ## Downloads
 
