@@ -36,21 +36,21 @@ At a conceptual level, the complex primary visibility determination is part of a
 **Figure 2.** Diagram of building an application using the MFR pipeline (top). For example, Order-independent transparency requires the sorting of an arbitrary sequence of out-of-order fragments before alpha
 compositing them in a linear traversal fashion (bottom).
 
-
 ## Downloads
 
 ### GLSL Source Code
 
-A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer and A-buffer alternatives. The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
+A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer and A-buffer alternatives (summarized in our recent survey [VVP20](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
 
 #### Data Structures
 |  Name/Location | Description | Citation |
 | ---   | ---      | ---         |
 | [**Depth Peeling**](Sources/MFR/shaders/source/Depth_Peeling) ||
-| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B)            | Front-to-back (Forward)  | [Eve01](#[Eve01])   |
-| [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B_Deferred) | Front-to-back (Deferred) | [VF13](#[VF13])     |
-| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)          | Dual                     | [BMB08](#[BMB08])   |
-| [BUN](Sources/MFR/shaders/source/Depth_Peeling/BUN)            | Bucket (Uniform)         | [LHLW09](#[LHLW09]) |
+| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B/Original)      | Front-to-back (Forward)    | [Eve01](#[Eve01])   |
+| [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B/Deferred)    | Front-to-back (Deferred)   | [VF13](#[VF13])     |
+| [F2B_ZF](Sources/MFR/shaders/source/Depth_Peeling/F2B/Z-Fighting) | Front-to-back (Z-fighting) | [VF13](#[VF13])     |
+| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)             | Dual                       | [BMB08](#[BMB08])   |
+| [BUN](Sources/MFR/shaders/source/Depth_Peeling/BUN)               | Bucket (Uniform)           | [LHLW09](#[LHLW09]) |
 
 <!--
 | **k-buffer** ([*ZIP* file](Sources/k-buffer.zip))||
@@ -72,7 +72,6 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 (TBD)
 
 ### Research Content
-
 <!--
 - Evangelou I., Papaioannou G., Vardis K., Vasilakis A. A., '_Rasterization-based Progressive Photon Mapping_', _conditionally accepted_ at The Visual Computer (CGI'2020 Special Issue). <img src="Figures\new.png" width="40">
 -->
@@ -116,11 +115,15 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
 
 ## References
 
+### Survey
+
+- <a name="[VVP20]"> [VVP20]  </a> Vasilakis et al., "A Survey of Multifragment Rendering", CGF (EG STAR), 2020.
+
 ### Depth Peeling
 
 - <a name="[Eve01]"> [Eve01]  </a> Everitt, "Interactive Order-Independent Transparency", Tech. rep., Nvidia Corporation, 2001.
 - <a name="[BMB08]"> [BMB08]  </a> Bavoil and Myers, "Order Independent Transparency with Dual Depth Peeling", Tech. rep., Nvidia Corporation, 2008.
-- <a name="[LHLW09]">[LHLW09] </a> Liu et al., "Efficient Depth Peeling via Bucket Sort", High Performance Graphics, 2009.
+- <a name="[LHLW09]">[LHLW09] </a> Liu et al., "Efficient Depth Peeling via Bucket Sort", HPG, 2009.
 - <a name="[VF13]">  [VF13]   </a> Vasilakis and Fudos, "Depth-Fighting Aware Methods for Multifragment Rendering", TVCG, 2013.
  
 ### k-buffer

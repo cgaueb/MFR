@@ -8,7 +8,7 @@
 
 //---------------------------------------------------------------------------------------------------------------
 // Implementation of "Bucket (Uniform) Depth Peeling" method as described in
-// "Liu et al., "Efficient Depth Peeling via Bucket Sort", High Performance Graphics, 2009".
+// "Liu et al., "Efficient Depth Peeling via Bucket Sort", HPG, 2009".
 //
 // [Init][G1] -> 1st Pass (Geometry) executed once at the initialization stage.
 //---------------------------------------------------------------------------------------------------------------

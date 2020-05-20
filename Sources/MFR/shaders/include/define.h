@@ -38,3 +38,7 @@
 #define LOCAL_SIZE_1n		LOCAL_SIZE - 1
 
 #define Packed_1f			4294967295U // 0xFFFFFFFFU
+
+#define float_max			3.40282e+038f
+#define float_min		   -3.40282e+038f
+#define uint_max			4294967295

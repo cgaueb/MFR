@@ -8,7 +8,7 @@
 
 //---------------------------------------------------------------------------------------------------------------
 // Implementation of "Bucket (Uniform) Depth Peeling" method as described in
-// "Liu et al., "Efficient Depth Peeling via Bucket Sort", High Performance Graphics, 2009".
+// "Liu et al., "Efficient Depth Peeling via Bucket Sort", HPG, 2009".
 //
 // [Iter][G1] -> 1st Pass (Geometry) executed in each iteration.
 //---------------------------------------------------------------------------------------------------------------
@@ -19,15 +19,12 @@
 vec4 computePixelColor();
 
 // Input Variables
-layout(binding = 0)  uniform 	sampler2DRect in_tex_peel_0;
-layout(binding = 1)  uniform 	sampler2DRect in_tex_peel_1;
-layout(binding = 2)  uniform 	sampler2DRect in_tex_peel_2;
-layout(binding = 3)  uniform 	sampler2DRect in_tex_peel_3;
-layout(binding = 10) uniform 	sampler2DRect in_tex_depth_bounds;
+layout(binding = 0) uniform 	sampler2DArray in_tex_peel_depth;
+layout(binding = 1) uniform 	sampler2DRect  in_tex_depth_bounds;
 
-// Ouputput Variables
-layout(location = 0, index = 0) out vec4 	  out_frag_depth[BUCKET_SIZE/2];
-layout(location = 4, index = 0) out vec4 	  out_frag_color[BUCKET_SIZE/2];
+// Output Variables
+layout(location = 0, index = 0) out vec4 	   out_frag_depth[BUCKET_SIZE/2];
+layout(location = 4, index = 0) out vec4 	   out_frag_color[BUCKET_SIZE/2];
 
 void main(void)
 {
@@ -43,11 +40,7 @@ void main(void)
 	int b22 	= bucket%2;
 
 	// Get bucket depth bounds
-	vec4  bucket_depth_bounds;
-	if		(b2==0) bucket_depth_bounds = texture(in_tex_peel_0, gl_FragCoord.xy);
-	else if (b2==1) bucket_depth_bounds = texture(in_tex_peel_1, gl_FragCoord.xy);
-	else if (b2==2) bucket_depth_bounds = texture(in_tex_peel_2, gl_FragCoord.xy);
-	else			bucket_depth_bounds = texture(in_tex_peel_3, gl_FragCoord.xy);
+	vec4  bucket_depth_bounds = texelFetch(in_tex_peel_depth, ivec3(gl_FragCoord.xy, b2), 0);
 
 	if(b22 == 1)
 		bucket_depth_bounds.rg = bucket_depth_bounds.ba;
@@ -74,7 +67,7 @@ void main(void)
 	
 	// Compute shading for the fragment that has depth equal
 	// to the one of the values of the min-max depth buffer
-	vec4 color = computePixelColor();
+	uint color = packUnorm4x8(computePixelColor());
 	if (gl_FragCoord.z == bucket_depth_bounds.r) out_frag_color[b2][b22  ] = color;
 	else										 out_frag_color[b2][b22+1] = color;
 }
