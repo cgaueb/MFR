@@ -53,9 +53,6 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [BUN](Sources/MFR/shaders/source/Depth_Peeling/Bucket_Uniform)               | Uniform Buckets                 | [LHLW09](#[LHLW09]) |
 | [**A-buffer**](Sources/MFR/shaders/source/A-buffer) ||
 | [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                    | [YHG*10](#[YHG*10]) |
-<!--
-| [AB_LL_P](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Paged)            | Linked-Lists (Paged)            | [Cra10b](#[Cra10b]) |
--->
 | [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)           | [VVP16a](#[VVP16a]) |
 | [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [VF13](#[VF13])     |
 | [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [Cra10a](#[Cra10a]) |
