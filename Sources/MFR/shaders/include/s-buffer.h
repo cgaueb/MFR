@@ -1,5 +1,3 @@
-#extension GL_NV_gpu_shader5 : enable
-
 #define inverse			1				
 #define COUNTERS		32				
 #define COUNTERS_2d		COUNTERS >> 1	
@@ -9,8 +7,8 @@
 #define COUNTERS_Y		192				
 #define COUNTERS_W		4
 
-	int hashFunction(ivec2 coords)
-	{
-		ivec2 tile = ivec2(coords.x / COUNTERS_X, coords.y / COUNTERS_Y);
-		return tile.x * COUNTERS_W + tile.y;
-	}
+int hashFunction(const ivec2 coords)
+{
+	ivec2  tile = ivec2(coords.x / COUNTERS_X, coords.y / COUNTERS_Y);
+	return tile.x * COUNTERS_W + tile.y;
+}

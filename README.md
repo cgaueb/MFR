@@ -44,21 +44,23 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 
 #### Data Structures
 |  Name/Location | Description | Citation |
-| ---   | ---      | ---         |
+| ---            | ---         | ---      |
 | [**Depth Peeling**](Sources/MFR/shaders/source/Depth_Peeling) ||
-| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B/Original)      | Front-to-back (Forward)    | [Eve01](#[Eve01])   |
-| [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B/Deferred)    | Front-to-back (Deferred)   | [VF13](#[VF13])     |
-| [F2B_ZF](Sources/MFR/shaders/source/Depth_Peeling/F2B/Z-Fighting) | Front-to-back (Z-fighting) | [VF13](#[VF13])     |
-| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)             | Dual                       | [BMB08](#[BMB08])   |
-| [BUN](Sources/MFR/shaders/source/Depth_Peeling/BUN)               | Bucket (Uniform)           | [LHLW09](#[LHLW09]) |
-
+| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B/Original)                 | Front-to-back (Forward)         | [Eve01](#[Eve01])   |
+| [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B/Deferred)               | Front-to-back (Deferred)        | [VF13](#[VF13])     |
+| [F2B_ZF](Sources/MFR/shaders/source/Depth_Peeling/F2B/Z-Fighting)            | Front-to-back (Z-fighting)      | [VF13](#[VF13])     |
+| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)                        | Dual                            | [BMB08](#[BMB08])   |
+| [BUN](Sources/MFR/shaders/source/Depth_Peeling/Bucket_Uniform)               | Uniform Buckets                 | [LHLW09](#[LHLW09]) |
+| [**A-buffer**](Sources/MFR/shaders/source/A-buffer) ||
+| [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                    | [YHG*10](#[YHG*10]) |
 <!--
-| **k-buffer** ([*ZIP* file](Sources/k-buffer.zip))||
-| [KB](Sources/MFR/shaders/source)      | K-buffer      | [BCL*07](#[BCL*07]) |
-| **A-Buffer** ([*ZIP* file](Sources/A-buffer.zip))||
-| [AB-LL](Sources/MFR/shaders/source)   | Linked-List   | [YHG*10](#[YHG*10]) |
-| **ALL** ([*ZIP* file](Sources/sources.zip))||
+| [AB_LL_P](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Paged)            | Linked-Lists (Paged)            | [Cra10b](#[Cra10b]) |
 -->
+| [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)           | [VVP16a](#[VVP16a]) |
+| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [VF13](#[VF13])     |
+| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [Cra10a](#[Cra10a]) |
+| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [VF12](#[VF12])     |
+| [**k-buffer**](Sources/MFR/shaders/source/k-buffer) ||
 
 <!--
 #### Sorting Solutions
@@ -69,7 +71,8 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 
 ### Demos
 
-(TBD)
+- A simple forward rendering engine that can be used as a research prototyping platform for testing various MFR algorithms for shading and illumination effects using modern OpenGL. (TBD)
+- Screen-space Ray Tracing demos from [VVP16a](#[VVP16a]) and [VVP16b](#[VVP16b]) papers. (TBD)
 
 ### Research Content
 <!--
