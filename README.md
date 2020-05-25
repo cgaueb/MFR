@@ -106,9 +106,9 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
     number  = {2},
     pages   = {623-642},
     year    = {2020},
+    issn    = {1467-8659},
+    doi     = {10.1111/cgf.14019},
     publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
-    ISSN = {1467-8659},
-    DOI = {10.1111/cgf.14019}
 }
 
 </pre>
