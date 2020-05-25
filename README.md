@@ -40,7 +40,7 @@ compositing them in a linear traversal fashion (bottom).
 
 ### GLSL Source Code
 
-A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer and A-buffer alternatives (summarized in our recent survey [VVP20](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
+A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer (TBD) and A-buffer alternatives (summarized in our recent survey [VVP20](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
 
 #### Data Structures
 |  Name/Location | Description | Citation |
@@ -57,7 +57,6 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [VF13](#[VF13])     |
 | [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [Cra10a](#[Cra10a]) |
 | [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [VF12](#[VF12])     |
-| [**k-buffer**](Sources/MFR/shaders/source/k-buffer) ||
 
 <!--
 #### Sorting Solutions
@@ -69,7 +68,8 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 ### Demos
 
 - A simple forward rendering engine that can be used as a research prototyping platform for testing various MFR algorithms for shading and illumination effects using modern OpenGL. (TBD)
-- Screen-space Ray Tracing demos from [VVP16a](#[VVP16a]) and [VVP16b](#[VVP16b]) papers. (TBD)
+- Screen-space Ray Tracing demos from [VVP16a](#[VVP16a]) and [VVP16b](#[VVP16b]) papers can be found 
+<a href="http://graphics.cs.aueb.gr/graphics/downloads.html"> here </a>.
 
 ### Research Content
 <!--
@@ -108,7 +108,7 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
     year    = {2020},
     issn    = {1467-8659},
     doi     = {10.1111/cgf.14019},
-    publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
+    publisher = {The Eurographics Association and John Wiley & Sons Ltd.}
 }
 
 </pre>
