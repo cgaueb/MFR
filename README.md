@@ -98,18 +98,19 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
 </pre>
 
 <pre style="white-space:pre-wrap;">
-@journal{VVP_EG_2020_STAR,
+@article{VVP_EG_2020_STAR,
     title   = {A Survey of Multifragment Rendering},
     author  = {Vasilakis, Andreas Alexandros and Vardis, Konstantinos and Papaioannou, Georgios},
     journal = {Computer Graphics Forum},
     volume  = {39},
     number  = {2},
-    pages   = {?-?},
+    pages   = {623-642},
     year    = {2020},
-    doi     = {TBD},
-    url     = {TBD},
-    eprint  = {TBD}
+    publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
+    ISSN = {1467-8659},
+    DOI = {10.1111/cgf.14019}
 }
+
 </pre>
 </blockquote>
 
