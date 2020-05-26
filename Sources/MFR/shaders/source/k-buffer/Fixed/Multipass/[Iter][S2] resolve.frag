@@ -7,22 +7,23 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "k-buffer" method as described in 
-// "Bavoil et al., Multi-fragment Effects on the GPU Using the k-buffer, I3D, 2007".
+// Implementation of "k-buffer (multipass)" method as described in 
+// "Liu et al., Multi-layer depth peeling via fragment sort, CAD&CG, 2009".
 //
-// [Iter][G3] -> 3rd Pass (Screen-space) executed optionally in each iteration, in case multiple
-// passes are needed
+// [Iter][S2] -> 2nd Pass (Screen-space) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"
 
 // Input Variables
-layout(binding = 0) uniform sampler2DRect in_tex_peel_data;
+uniform int layer;
+layout(binding = 0) uniform  sampler2DArray in_tex_peel_data;
 
 // Output Variables
-layout(location = 0, index = 0) out vec4  out_frag_depth;
+layout(location = 0, index = 0) out vec4 	out_frag_color;
 
 void main(void)
 {
-	out_frag_depth.r = texture(in_tex_peel_data, gl_FragCoord.xy).g;
+	// Return the color value of the specific coplanar fragment
+	out_frag_color = unpackUnorm4x8(floatBitsToUint(texelFetch(in_tex_peel_color, ivec3(gl_FragCoord.xy, layer), 0).r));
 }

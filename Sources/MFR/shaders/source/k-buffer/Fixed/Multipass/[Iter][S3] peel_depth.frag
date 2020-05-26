@@ -7,11 +7,10 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "k-buffer" method as described in 
-// "Bavoil et al., Multi-fragment Effects on the GPU Using the k-buffer, I3D, 2007".
+// Implementation of "k-buffer (multipass)" method as described in 
+// "Liu et al., Multi-layer depth peeling via fragment sort, CAD&CG, 2009".
 //
-// [Iter][G3] -> 3rd Pass (Screen-space) executed optionally in each iteration, in case multiple
-// passes are needed
+// [Iter][S3] -> 3rd Pass (Screen-space) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"
@@ -24,5 +23,20 @@ layout(location = 0, index = 0) out vec4  out_frag_depth;
 
 void main(void)
 {
-	out_frag_depth.r = texture(in_tex_peel_data, gl_FragCoord.xy).g;
+	// Find the max depth
+	float maxZ = 0.0f;
+	for (int i=0; i<KB_SIZE; i++)
+	{
+		float Z = texelFetch(in_tex_peel_data, ivec3(gl_FragCoord.xy, i), 0).g;
+		if(Z == 1.0f)
+		{
+			maxZ = 1.0f;
+			break;
+		}
+		else if(Z > maxZ)
+			maxZ = Z;
+	}
+
+	// Return the max depth
+	out_frag_depth.r = maxZ;
 }

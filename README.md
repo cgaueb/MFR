@@ -58,7 +58,8 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [Cra10a](#[Cra10a]) |
 | [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [VF12](#[VF12])     |
 | [**k-buffer**](Sources/MFR/shaders/source/k-buffer) ||
-| [KB](Sources/MFR/shaders/source/k-buffer/Fixed/Original)                     | Fixed Arrays                    | [BCL*07](#[BCL*07]) |
+| [KB](Sources/MFR/shaders/source/k-buffer/Fixed/Original)                     | Fixed Arrays                    | [BCL*07](#[BCL*07])   |
+| [KB_MULTI](Sources/MFR/shaders/source/k-buffer/Fixed/Multipass)              | Fixed Arrays (Multipass)        | [LWXW*09](#[LWXW*09]) |
 
 <!--
 #### Sorting Solutions
@@ -131,16 +132,16 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
  
 ### k-buffer
 
-- <a name="[BCL*07]">[BCL*07] </a> Bavoil et al., "Multi-fragment Effects on the GPU Using the k-buffer", I3D, 2007.
-- <a name="[BCL*07]">[LWXW*09]</a> Liu et al., "Multi-layer depth peeling via fragment sort", CAD&CG, 2009.
-- <a name="[YYH∗12]">[YYH∗12] </a> Yu et al., "A Framework for Rendering Complex Scattering Effects on Hair", I3D, 2012.
-- <a name="[MCTB13]">[MCTB13] </a> Maule et al., "Hybrid Transparency", I3D, 2013.
-- <a name="[Sal13]"> [Sal13]  </a> Salvi, "Advances in Real-Time Rendering in Games: Pixel Synchronization: Solving old graphics problems with new data structures", SIGGRAPH Courses, 2013.
-- <a name="[Kub14]"> [Kub14]  </a> Kubish, "Order Independent Transparency In OpenGL 4.x.", GTC, 2014.
-- <a name="[VF14]">  [VF14]   </a> Vasilakis and Fudos, "k<sup>+</sup>-buffer: Fragment Synchronized k-buffer", I3D, 2014.
-- <a name="[VP15]">  [VP15]   </a> Vasilakis and Papaioannou, "Improving k-buffer Methods via Occupancy Maps", EG (Short Papers), 2015.
-- <a name="[VPF15]"> [VPF15]  </a> Vasilakis et al., "k<sup>+</sup>-buffer: An efficient, memory-friendly and dynamic k-buffer framework", TVCG, 2015.
-- <a name="[VVPM17]"> [VVPM17]  </a> Vasilakis et al., "Variable k-buffer using Importance Maps", EG (Short Papers), 2017.
+- <a name="[BCL*07]">[BCL*07]  </a> Bavoil et al., "Multi-fragment Effects on the GPU Using the k-buffer", I3D, 2007.
+- <a name="[LWXW*09]">[LWXW*09]</a> Liu et al., "Multi-layer depth peeling via fragment sort", CAD&CG, 2009.
+- <a name="[YYH∗12]">[YYH∗12]  </a> Yu et al., "A Framework for Rendering Complex Scattering Effects on Hair", I3D, 2012.
+- <a name="[MCTB13]">[MCTB13]  </a> Maule et al., "Hybrid Transparency", I3D, 2013.
+- <a name="[Sal13]"> [Sal13]   </a> Salvi, "Advances in Real-Time Rendering in Games: Pixel Synchronization: Solving old graphics problems with new data structures", SIGGRAPH Courses, 2013.
+- <a name="[Kub14]"> [Kub14]   </a> Kubish, "Order Independent Transparency In OpenGL 4.x.", GTC, 2014.
+- <a name="[VF14]">  [VF14]    </a> Vasilakis and Fudos, "k<sup>+</sup>-buffer: Fragment Synchronized k-buffer", I3D, 2014.
+- <a name="[VP15]">  [VP15]    </a> Vasilakis and Papaioannou, "Improving k-buffer Methods via Occupancy Maps", EG (Short Papers), 2015.
+- <a name="[VPF15]"> [VPF15]   </a> Vasilakis et al., "k<sup>+</sup>-buffer: An efficient, memory-friendly and dynamic k-buffer framework", TVCG, 2015.
+- <a name="[VVPM17]"> [VVPM17] </a> Vasilakis et al., "Variable k-buffer using Importance Maps", EG (Short Papers), 2017.
 
 ### A-buffer
 
