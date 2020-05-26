@@ -24,7 +24,7 @@ layout(binding = 0) uniform  sampler2DArray in_tex_peel_color;
 layout(early_fragment_tests) in;
 
 // Output Variables	
-layout(location = 0, index = 0) out  vec4 out_frag_color[KB_SIZE];
+layout(location = 0, index = 0) out  vec4 	out_frag_color[KB_SIZE];
 
 void main(void)
 {

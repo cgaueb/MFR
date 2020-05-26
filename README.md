@@ -52,13 +52,13 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)                        | Dual                            | [[BMB08]](#[BMB08])   |
 | [BUN](Sources/MFR/shaders/source/Depth_Peeling/Bucket_Uniform)               | Uniform Buckets                 | [[LHLW09]](#[LHLW09]) |
 | [**A-buffer**](Sources/MFR/shaders/source/A-buffer) ||
-| [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                    | [[YHG*10]](#[YHG*10]) |
-| [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)           | [[VVP16a]](#[VVP16a]) |
-| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [[VF13]](#[VF13])     |
-| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [[Cra10a]](#[Cra10a]) |
-| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [[VF12]](#[VF12])     |
-| **<em>k</em>-buffer** ||
-| TODO | TODO | TODO  |
+| [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                    | [YHG*10](#[YHG*10]) |
+| [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)           | [VVP16a](#[VVP16a]) |
+| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [VF13](#[VF13])     |
+| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [Cra10a](#[Cra10a]) |
+| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [VF12](#[VF12])     |
+| [**k-buffer**](Sources/MFR/shaders/source/k-buffer) ||
+| [KB](Sources/MFR/shaders/source/k-buffer/Fixed/Original)                     | Fixed Arrays                    | [BCL*07](#[BCL*07]) |
 
 <!--
 #### Sorting Solutions
