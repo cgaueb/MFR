@@ -4,7 +4,7 @@
 
 Multifragment rendering (MFR) is a genre of image synthesis techniques and associated data structures tightly coupled with the rasterisation pipeline, which has helped deliver important improvements to the visual quality of primitive-order rendering and has enabled the real-time display of complex phenomena and structures. An MFR method encompasses the algorithms and image-space data structures that are necessary to produce, maintain, process and exploit a set of geometry fragments that are associated with a single image, in the sense that multiple samples correspond to the same location in image space.
 
-The main advantage of these approaches is that they encompass additional rasterised geometry, by retaining more information from the fragment sampling domain, thus augmenting the visibility determination stage. For more details, please refer to the recent <a href="Multimedia\EG2020_STAR_paper.pdf"> state-of-the-art report </a> which was accepted at the Eurographics 2020 conference. 
+The main advantage of these approaches is that they encompass additional rasterised geometry, by retaining more information from the fragment sampling domain, thus augmenting the visibility determination stage. For more details, please refer to the recent <a href="Multimedia\EG2020_STAR_paper.pdf"> state-of-the-art report </a> which was presented at the Eurographics 2020 conference. 
 
 ![Image description](Figures/teaser.png)
 **Figure 1.** Multifragment rendering has been deployed in a wide spectrum of rendering applications in order to generate compelling graphics effects at interactive frame rates.
@@ -40,23 +40,25 @@ compositing them in a linear traversal fashion (bottom).
 
 ### GLSL Source Code
 
-A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer (TBD) and A-buffer alternatives (summarized in our recent survey [VVP20](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
+A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer (TBD) and A-buffer alternatives (summarized in our recent survey [[VVP20]](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
 
 #### Data Structures
 |  Name/Location | Description | Citation |
 | ---            | ---         | ---      |
 | [**Depth Peeling**](Sources/MFR/shaders/source/Depth_Peeling) ||
-| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B/Original)                 | Front-to-back (Forward)         | [Eve01](#[Eve01])   |
-| [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B/Deferred)               | Front-to-back (Deferred)        | [VF13](#[VF13])     |
-| [F2B_ZF](Sources/MFR/shaders/source/Depth_Peeling/F2B/Z-Fighting)            | Front-to-back (Z-fighting)      | [VF13](#[VF13])     |
-| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)                        | Dual                            | [BMB08](#[BMB08])   |
-| [BUN](Sources/MFR/shaders/source/Depth_Peeling/Bucket_Uniform)               | Uniform Buckets                 | [LHLW09](#[LHLW09]) |
+| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B/Original)                 | Front-to-back (Forward)         | [[Eve01]](#[Eve01])   |
+| [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B/Deferred)               | Front-to-back (Deferred)        | [[VF13]](#[VF13])     |
+| [F2B_ZF](Sources/MFR/shaders/source/Depth_Peeling/F2B/Z-Fighting)            | Front-to-back (Z-fighting)      | [[VF13]](#[VF13])     |
+| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)                        | Dual                            | [[BMB08]](#[BMB08])   |
+| [BUN](Sources/MFR/shaders/source/Depth_Peeling/Bucket_Uniform)               | Uniform Buckets                 | [[LHLW09]](#[LHLW09]) |
 | [**A-buffer**](Sources/MFR/shaders/source/A-buffer) ||
-| [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                    | [YHG*10](#[YHG*10]) |
-| [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)           | [VVP16a](#[VVP16a]) |
-| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [VF13](#[VF13])     |
-| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [Cra10a](#[Cra10a]) |
-| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [VF12](#[VF12])     |
+| [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                    | [[YHG*10]](#[YHG*10]) |
+| [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)           | [[VVP16a]](#[VVP16a]) |
+| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [[VF13]](#[VF13])     |
+| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [[Cra10a]](#[Cra10a]) |
+| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [[VF12]](#[VF12])     |
+| **<em>k</em>-buffer** ||
+| TODO | TODO | TODO  |
 
 <!--
 #### Sorting Solutions
@@ -69,23 +71,23 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 
 - A simple forward rendering engine that can be used as a research prototyping platform for testing various MFR algorithms for shading and illumination effects using modern OpenGL. (TBD)
 - Screen-space Ray Tracing demos from [VVP16a](#[VVP16a]) and [VVP16b](#[VVP16b]) papers can be found 
-<a href="http://graphics.cs.aueb.gr/graphics/downloads.html"> here </a>.
+<a href="http://graphics.cs.aueb.gr/graphics/downloads.html">here</a>.
 
 ### Research Content
 <!--
 - Evangelou I., Papaioannou G., Vardis K., Vasilakis A. A., '_Rasterization-based Progressive Photon Mapping_', _conditionally accepted_ at The Visual Computer (CGI'2020 Special Issue). <img src="Figures\new.png" width="40">
 -->
-- Vasilakis A. A., Vardis K., Papaioannou G., '_A Survey of Multifragment Rendering_', Computer Graphics Forum (Eurographics 2020 - STAR Papers). 
+- Vasilakis A. A., Vardis K., Papaioannou G., '*[A Survey of Multifragment Rendering](https://diglib.eg.org/handle/10.1111/cgf14019)*', Computer Graphics Forum (Eurographics 2020 - STAR Papers). 
 <a href="Multimedia\EG2020_STAR_paper.pdf"> <img alt="EG 2020 paper pdf" src="Figures\pdf.png" width="25"> </a>
 <a href="Multimedia\EG2020_STAR_presentation.pptx"> <img alt="EG 2020 presentation" src="Figures\pptx.png" width="25"> </a>
-- Vasilakis A. A., Vardis K., Papaioannou G. and Moustakas K.,'_Variable k-buffer using Importance Maps_', Eurographics 2017 - Short Papers. <a href="Multimedia\EG2017_SP_paper.pdf"> <img alt="EG 2017 paper pdf" src="Figures\pdf.png" width="25"> </a> 
+- Vasilakis A. A., Vardis K., Papaioannou G. and Moustakas K.,'*[Variable k-buffer using Importance Maps](https://diglib.eg.org/handle/10.2312/egsh20171005)*', Eurographics 2017 - Short Papers. <a href="Multimedia\EG2017_SP_paper.pdf"> <img alt="EG 2017 paper pdf" src="Figures\pdf.png" width="25"></a> 
 <a href="Multimedia\EG2017_SP_presentation.pptx"> <img alt="EG 2017 presentation" src="Figures\pptx.png" width="25"> </a>
--  Vardis K., Vasilakis A. A., Papaioannou G., '_DIRT: Deferred Image-based Ray Tracing_', High-Performance Graphics 2016.
+- Vardis K., Vasilakis A. A., Papaioannou G., '*[DIRT: Deferred Image-based Ray Tracing](http://diglib.eg.org/handle/10.2312/hpg20161193)*', High-Performance Graphics 2016.
 <a href="Multimedia\HPG2016_paper.pdf"> <img alt="HPG 2016 paper pdf" src="Figures\pdf.png" width="25"> </a>
 <a href="https://www.kostasvardis.com/files/research/dirt_hpg2016.pptx"> <img alt="HPG 2016 presentation" src="Figures\pptx.png" width="25"> </a>
--  Vardis K., Vasilakis A. A., Papaioannou G., '_A Multiview and Multilayer Approach for Interactive Ray Tracing_', Interactive 3D Graphics and Games 2016. <a href="Multimedia\I3D2016_paper.pdf"> <img alt="I3D 2016 paper pdf" src="Figures\pdf.png" width="25"> </a> <a href="https://www.kostasvardis.com/files/research/mmrt_i3d2016.pptx"> <img alt="I3D 2016 presentation" src="Figures\pptx.png" width="25"> </a> <a href="https://youtu.be/0yLrVZGNFlA"> <img alt="I3D 2016 video" src="Figures\video.png" width="25"> </a>
--  Vasilakis A. A., Papaioannou G., Fudos I. '_k<sup>+</sup>-buffer: An efficient, memory-friendly and dynamic k-buffer framework_', TVCG, 2015. <a href="Multimedia\TVCG2015_paper.pdf"> <img alt="TVCG 2015 paper pdf" src="Figures\pdf.png" width="25"> </a>
--  Vasilakis A. A., Papaioannou G., '_Improving k-buffer methods via Occupancy Maps_', Eurographics 2015 - Short Papers. <a href="Multimedia\EG2015_SP_paper.pdf"> <img alt="EG 2015 paper pdf" src="Figures\pdf.png" width="25"> </a> <a href="Multimedia\EG2015_SP_presentation.pptx"> <img alt="EG 2015 presentation" src="Figures\pptx.png" width="25"> </a>
+- Vardis K., Vasilakis A. A., Papaioannou G., '*[A Multiview and Multilayer Approach for Interactive Ray Tracing](http://dl.acm.org/citation.cfm?id=2856401)*', Interactive 3D Graphics and Games 2016. <a href="Multimedia\I3D2016_paper.pdf"> <img alt="I3D 2016 paper pdf" src="Figures\pdf.png" width="25"> </a> <a href="https://www.kostasvardis.com/files/research/mmrt_i3d2016.pptx"> <img alt="I3D 2016 presentation" src="Figures\pptx.png" width="25"> </a> <a href="https://youtu.be/0yLrVZGNFlA"> <img alt="I3D 2016 video" src="Figures\video.png" width="25"> </a>
+- Vasilakis A. A., Papaioannou G., Fudos I. '*[k<sup>+</sup>-buffer: An efficient, memory-friendly and dynamic k-buffer framework](https://ieeexplore.ieee.org/document/7070744)*', TVCG, 2015. <a href="Multimedia\TVCG2015_paper.pdf"> <img alt="TVCG 2015 paper pdf" src="Figures\pdf.png" width="25"> </a>
+- Vasilakis A. A., Papaioannou G., '*[Improving k-buffer methods via Occupancy Maps](https://diglib.eg.org/handle/10.2312/egsh.20151017.069-072)*', Eurographics 2015 - Short Papers. <a href="Multimedia\EG2015_SP_paper.pdf"> <img alt="EG 2015 paper pdf" src="Figures\pdf.png" width="25"> </a> <a href="Multimedia\EG2015_SP_presentation.pptx"> <img alt="EG 2015 presentation" src="Figures\pptx.png" width="25"> </a>
 
 ## How to Cite
 The license is [MIT](LICENSE). If you use the contents of this repository for your work, please cite it as described below:
