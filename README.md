@@ -75,9 +75,8 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 <a href="http://graphics.cs.aueb.gr/graphics/downloads.html">here</a>.
 
 ### Research Content
-<!--
+
 - Evangelou I., Papaioannou G., Vardis K., Vasilakis A. A., '_Rasterization-based Progressive Photon Mapping_', _conditionally accepted_ at The Visual Computer (CGI'2020 Special Issue). <img src="Figures\new.png" width="40">
--->
 - Vasilakis A. A., Vardis K., Papaioannou G., '*[A Survey of Multifragment Rendering](https://diglib.eg.org/handle/10.1111/cgf14019)*', Computer Graphics Forum (Eurographics 2020 - STAR Papers). 
 <a href="Multimedia\EG2020_STAR_paper.pdf"> <img alt="EG 2020 paper pdf" src="Figures\pdf.png" width="25"> </a>
 <a href="Multimedia\EG2020_STAR_presentation.pptx"> <img alt="EG 2020 presentation" src="Figures\pptx.png" width="25"> </a>
