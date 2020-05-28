@@ -31,7 +31,7 @@
 
 #define KB_SIZE				8
 #define BUCKET_SIZE			8
-#define STENCIL_SIZE		((HEAP_SIZE < 32) ? HEAP_SIZE : 32)
+#define STENCIL_SIZE		((KB_SIZE < 32) ? HEAP_SIZE : 32)
 
 #define HISTOGRAM_SIZE		1024
 #define LOCAL_SIZE			32	

@@ -10,7 +10,7 @@
 // Implementation of "k-buffer (multipass)" method as described in 
 // "Liu et al., Multi-layer depth peeling via fragment sort, CAD&CG, 2009".
 //
-// [Iter][G1] -> 1nd Pass (Geometry) executed in each iteration.
+// [Iter][G1] -> 1st Pass (Geometry) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"

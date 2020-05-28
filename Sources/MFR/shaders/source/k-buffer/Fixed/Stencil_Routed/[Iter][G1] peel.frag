@@ -7,8 +7,8 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "k-buffer" method as described in 
-// "Bavoil et al., Multi-fragment Effects on the GPU Using the k-buffer, I3D, 2007".
+// Implementation of "Stencil-routed k-buffer" method as described in 
+// "Bavoil, Myres, Deferred Rendering using a Stencil Routed k-Buffer, ShaderX6, 2008".
 //
 // [Iter][G1] -> 1st Pass (Geometry) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
@@ -19,13 +19,12 @@
 vec4 computePixelColor();
 
 // Input Variables
-layout(binding = 0) uniform sampler2DArray 	in_tex_peel_data;
 #if multipass
-layout(binding = 1) uniform sampler2DRect  	in_tex_depth;
+layout(binding = 0) uniform sampler2DRect in_tex_depth;
 #endif
 
 // Output Variables	
-layout(location = 0, index = 0) out vec4 	out_frag_color[KB_SIZE];
+layout(location = 0, index = 0) out vec4  out_frag_color;
 
 void main(void)
 {
@@ -34,26 +33,7 @@ void main(void)
 	if(gl_FragCoord.z <= texture(tex_depth, gl_FragCoord.xy).r)
 		discard;
 #endif
-
-	// Store fragment data values to a local array
-	vec4 k[KB_SIZE];
-	for(int i=0; i<KB_SIZE; i++)
-		k[i] = texelFetch(in_tex_peel_data, ivec3(gl_FragCoord.xy, i), 0);
-
-	// Compute and store the final shading color among with its depth value
-	vec2 value = vec2(uintBitsToFloat(packUnorm4x8(computePixelColor())), gl_FragCoord.z);
-
-	// Sort the fragment inside k-buffer
-	vec2 temp;
-	for(int i=0; i<KB_SIZE; i++)
-		if(value.g <= k[i].g)
-		{
-			temp    = value;
-			value   = k[i].rg;
-			k[i].rg = temp;
-		}
 	
-	// Store the updated local array back to the global buffer
-	for(int i=0; i<KB_SIZE; i++)
-		out_frag_color[i] = k[i];
+	// Compute and store the final shading color among with its depth value
+	out_frag_color = vec4(uintBitsToFloat(packUnorm4x8(computePixelColor())), gl_FragCoord.z, 0.0f, 0.0f);
 }

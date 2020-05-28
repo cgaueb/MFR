@@ -49,17 +49,18 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B/Original)                 | Front-to-back (Forward)         | [[Eve01]](#[Eve01])   |
 | [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B/Deferred)               | Front-to-back (Deferred)        | [[VF13]](#[VF13])     |
 | [F2B_ZF](Sources/MFR/shaders/source/Depth_Peeling/F2B/Z-Fighting)            | Front-to-back (Z-fighting)      | [[VF13]](#[VF13])     |
-| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)                        | Dual                            | [[BMB08]](#[BMB08])   |
+| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)                        | Dual                            | [[BMB08a]](#[BMB08a]) |
 | [BUN](Sources/MFR/shaders/source/Depth_Peeling/Bucket_Uniform)               | Uniform Buckets                 | [[LHLW09]](#[LHLW09]) |
 | [**A-buffer**](Sources/MFR/shaders/source/A-buffer) ||
-| [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                    | [YHG*10](#[YHG*10]) |
-| [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)           | [VVP16a](#[VVP16a]) |
-| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [VF13](#[VF13])     |
-| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [Cra10a](#[Cra10a]) |
-| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [VF12](#[VF12])     |
+| [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                    | [[YHG*10]](#[YHG*10]) |
+| [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)           | [[VVP16a]](#[VVP16a]) |
+| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [[VF13]](#[VF13])     |
+| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [[Cra10a]](#[Cra10a]) |
+| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [[VF12]](#[VF12])     |
 | [**k-buffer**](Sources/MFR/shaders/source/k-buffer) ||
-| [KB](Sources/MFR/shaders/source/k-buffer/Fixed/Original)                     | Fixed Arrays                    | [BCL*07](#[BCL*07])   |
-| [KB_MULTI](Sources/MFR/shaders/source/k-buffer/Fixed/Multipass)              | Fixed Arrays (Multipass)        | [LWXW*09](#[LWXW*09]) |
+| [KB](Sources/MFR/shaders/source/k-buffer/Fixed/Original)                     | Fixed Arrays                    | [[BCL*07]](#[BCL*07])   |
+| [KB_MULTI](Sources/MFR/shaders/source/k-buffer/Fixed/Multipass)              | Fixed Arrays (Multipass)        | [[LWXW*09]](#[LWXW*09]) |
+| [KB_SR](Sources/MFR/shaders/source/k-buffer/Fixed/Stencil_Routed)            | Fixed Arrays (Stencil-routed)   | [[BMB08b]](#[BMB08b]) |
 
 <!--
 #### Sorting Solutions
@@ -125,13 +126,14 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
 ### Depth Peeling
 
 - <a name="[Eve01]"> [Eve01]  </a> Everitt, "Interactive Order-Independent Transparency", Tech. rep., Nvidia Corporation, 2001.
-- <a name="[BMB08]"> [BMB08]  </a> Bavoil and Myers, "Order Independent Transparency with Dual Depth Peeling", Tech. rep., Nvidia Corporation, 2008.
+- <a name="[BMB08a]">[BMB08a] </a> Bavoil and Myers, "Order Independent Transparency with Dual Depth Peeling", Tech. rep., Nvidia Corporation, 2008.
 - <a name="[LHLW09]">[LHLW09] </a> Liu et al., "Efficient Depth Peeling via Bucket Sort", HPG, 2009.
 - <a name="[VF13]">  [VF13]   </a> Vasilakis and Fudos, "Depth-Fighting Aware Methods for Multifragment Rendering", TVCG, 2013.
  
 ### k-buffer
 
 - <a name="[BCL*07]">[BCL*07]  </a> Bavoil et al., "Multi-fragment Effects on the GPU Using the k-buffer", I3D, 2007.
+- <a name="[BM08b]"> [BM08b]   </a> Bavoil and Myers, "Deferred Rendering using a Stencil Routed k-Buffer", ShaderX6: Advanced Rendering Techniques, 2008.
 - <a name="[LWXW*09]">[LWXW*09]</a> Liu et al., "Multi-layer depth peeling via fragment sort", CAD&CG, 2009.
 - <a name="[YYH∗12]">[YYH∗12]  </a> Yu et al., "A Framework for Rendering Complex Scattering Effects on Hair", I3D, 2012.
 - <a name="[MCTB13]">[MCTB13]  </a> Maule et al., "Hybrid Transparency", I3D, 2013.

@@ -7,27 +7,28 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "k-buffer (multipass)" method as described in 
-// "Liu et al., Multi-layer depth peeling via fragment sort, CAD&CG, 2009".
+// Implementation of "Stencil-routed k-buffer" method as described in 
+// "Bavoil, Myres, Deferred Rendering using a Stencil Routed k-Buffer, ShaderX6, 2008".
 //
 // [Iter][S2] -> 2nd Pass (Screen-space) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"
+#include "sort.h"
 
 // Input Variables
-uniform int layer;
+uniform int	layer;
 
-layout(binding = 0) uniform  sampler2DArray in_tex_peel_data;
+layout(binding = 0) uniform  sampler2DMS in_tex_peel_data;
 
 // Output Variables
-layout(location = 0, index = 0) out vec4 	out_frag_color;
+layout(location = 0, index = 0) out vec4 out_frag_color;
 
 void main(void)
 {
 	// Store fragment data values to a local array
 	int count=0;
-	for(int i=0; i<KB_SIZE; i++)
+	for(int i=0; i<STENCIL_SIZE; i++)
 	{
 		vec2 data = texelFetch(in_tex_peel_data, ivec2(gl_FragCoord.xy), i).rg;
 		if(data.g == 1.0f)

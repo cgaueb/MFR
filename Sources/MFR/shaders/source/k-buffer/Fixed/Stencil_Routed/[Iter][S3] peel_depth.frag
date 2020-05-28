@@ -7,23 +7,37 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "k-buffer" method as described in 
-// "Bavoil et al., Multi-fragment Effects on the GPU Using the k-buffer, I3D, 2007".
+// Implementation of "Stencil-routed k-buffer" method as described in 
+// "Bavoil, Myres, Deferred Rendering using a Stencil Routed k-Buffer, ShaderX6, 2008".
 //
-// [Iter][G2] -> 2nd Pass (Screen-space) executed optionally in each iteration.
+// [Iter][G3] -> 3rd Pass (Screen-space) executed optionally in each iteration, in case multiple
+// passes are needed
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"
 
 // Input Variables
-uniform int layer;
-layout(binding = 0) uniform  sampler2DArray in_tex_peel_data;
+layout(binding = 0) uniform sampler2DMS  in_tex_peel_data;
 
 // Output Variables
-layout(location = 0, index = 0) out vec4 	out_frag_color;
+layout(location = 0, index = 0) out vec4 out_frag_depth;
 
 void main(void)
 {
-	// Return the color value of the specific fragment
-	out_frag_color = unpackUnorm4x8(floatBitsToUint(texelFetch(in_tex_peel_color, ivec3(gl_FragCoord.xy, layer), 0).r));
+	// Find the max depth
+	float maxZ = 0.0f;
+	for (int i=0; i<STENCIL_SIZE; i++)
+	{
+		float Z = texelFetch(in_tex_peel_data, ivec2(gl_FragCoord.xy), i).g;
+		if(Z == 1.0f)
+		{
+			maxZ = 1.0f;
+			break;
+		}
+		else if(Z > maxZ)
+			maxZ = Z;
+	}
+	
+	// Return the max depth
+	out_frag_depth.r = maxZ;
 }
