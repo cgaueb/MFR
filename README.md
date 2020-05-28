@@ -23,7 +23,7 @@ The main advantage of these approaches is that they encompass additional rasteri
 The goals of this github repository are to:
 - Present formally the MFR pipeline.
 - Offer a centralised location that contains source code and examples of the MFR-related research that has been done by the [CG AUEB Group](http://graphics.cs.aueb.gr).
-- Provide a generalised MFR framework for prototyping constructions methodologies and their applications, ranging from order-independent transparency to global illumination and data visualisation. (TBD)
+- Provide a generalised MFR framework for prototyping constructions methodologies and their applications, ranging from order-independent transparency to global illumination and data visualisation.
 
 ## Pipeline
 
@@ -40,7 +40,7 @@ compositing them in a linear traversal fashion (bottom).
 
 ### GLSL Source Code
 
-A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer (TBD) and A-buffer alternatives (summarized in our recent survey [[VVP20]](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
+A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer and A-buffer alternatives (summarized in our recent survey [[VVP20]](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
 
 #### Data Structures
 |  Name/Location | Description | Citation |
@@ -63,6 +63,7 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [KB_MULTI](Sources/MFR/shaders/source/k-buffer/Fixed/Multipass)              | Fixed Arrays (Multipass)                | [[LWXW*09]](#[LWXW*09]) |
 | [KB_MDT_32](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_32)    | Fixed Arrays (Multidepth Testing 32bit) | [[MCTB13]](#[MCTB13])   |
 | [KB_MDT_64](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_64)    | Fixed Arrays (Multidepth Testing 64bit) | [[Kub14]](#[Kub14])     |
+| [KB_PS](Sources/MFR/shaders/source/k-buffer/Fixed/Pixel_Synchronized)        | Fixed Arrays (Pixel Synchronized)       | [[Sal13]](#[Sal13])     |
 
 <!--
 #### Sorting Solutions

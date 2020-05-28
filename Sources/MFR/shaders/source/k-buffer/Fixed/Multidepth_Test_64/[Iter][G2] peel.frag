@@ -7,13 +7,14 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "k-buffer (multidepth testing - 32bit)" method as described in 
+// Implementation of "k-buffer (multidepth testing - 64bit)" method as described in 
 // "Kubish, Order Independent Transparency In OpenGL 4.x., GTC, 2014".
 //
 // [Iter][G2] -> 2nd Pass (Geometry) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"
+#include "data_structs.h"
 #extension GL_NV_shader_atomic_int64 : enable
 
 // Function declaration, the actual body of the function is application dependent
@@ -21,7 +22,7 @@ vec4 computePixelColor();
 
 // Input Variables
 uniform int	width;
-layout(binding = 0, std430)	coherent buffer KB_MDT_64 { uint64_t nodes[]; };
+layout(binding = 0, std430)	coherent buffer KB_MDT_64 { NodeTypeArray64 nodes[]; };
 
 // Help Functions
 uint hi32(const uint64_t val) { return uint(val>>32); }

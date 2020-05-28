@@ -7,26 +7,21 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "k-buffer (multidepth testing - 64bit)" method as described in 
-// "Kubish, Order Independent Transparency In OpenGL 4.x., GTC, 2014".
+// Implementation of "k-buffer (pixel synchronized)" method as described in 
+// "Salvi, Advances in Real-Time Rendering in Games: Pixel Synchronization: Solving old graphics 
+// problems with new data structures", SIGGRAPH Courses, 2013".
 //
-// [Iter][S3] -> 3rd Pass (Screen-space) executed in each iteration.
+// [Iter][S1] -> 1th Pass (Screen-space) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"
-#include "data_structs.h"
 
 // Input Variables
-uniform int	width;
-uniform int layer;
-layout(binding  = 0, std430) readonly buffer KB_MDT_64 { NodeTypeArray64 nodes[]; };
-
-// Output Variables
-layout(location = 0, index = 0) out vec4 out_frag_color;
+layout(binding = 0, rg32f) writeonly uniform image2DArray out_image_peel_data;
 
 void main(void)
 {
-	// Return the color value of the specific fragment
-	int index 		= (int(gl_FragCoord.x) + width*int(gl_FragCoord.y))*KB_SIZE;
-	out_frag_color 	= unpackUnorm4x8(unpackUint2x32(nodes[index + layer]).r);
+	// Initialize buffer nodes to one 
+	for(int i=0; i<KB_SIZE; i++)
+		imageStore(image_peel, ivec3(gl_FragCoord.xy, i), vec4(1.0f));
 }

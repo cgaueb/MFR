@@ -7,17 +7,18 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "k-buffer (multidepth testing - 32bit)" method as described in 
+// Implementation of "k-buffer (multidepth testing - 64bit)" method as described in 
 // "Kubish, Order Independent Transparency In OpenGL 4.x., GTC, 2014".
 //
 // [Iter][S1] -> 1th Pass (Screen-space) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"
+#include "data_structs.h"
 
 // Input Variables
 uniform int width;
-layout(binding = 0, std430)	writeonly buffer KB_MDT_64 { uint64_t nodes[]; };
+layout(binding = 0, std430)	writeonly buffer KB_MDT_64 { NodeTypeArray64 nodes[]; };
 
 void main(void)
 {
