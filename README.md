@@ -46,21 +46,23 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 |  Name/Location | Description | Citation |
 | ---            | ---         | ---      |
 | [**Depth Peeling**](Sources/MFR/shaders/source/Depth_Peeling) ||
-| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B/Original)                 | Front-to-back (Forward)         | [[Eve01]](#[Eve01])   |
-| [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B/Deferred)               | Front-to-back (Deferred)        | [[VF13]](#[VF13])     |
-| [F2B_ZF](Sources/MFR/shaders/source/Depth_Peeling/F2B/Z-Fighting)            | Front-to-back (Z-fighting)      | [[VF13]](#[VF13])     |
-| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)                        | Dual                            | [[BMB08a]](#[BMB08a]) |
-| [BUN](Sources/MFR/shaders/source/Depth_Peeling/Bucket_Uniform)               | Uniform Buckets                 | [[LHLW09]](#[LHLW09]) |
-| [**A-buffer**](Sources/MFR/shaders/source/A-buffer) ||
-| [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                    | [[YHG*10]](#[YHG*10]) |
-| [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)           | [[VVP16a]](#[VVP16a]) |
-| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)  | [[VF13]](#[VF13])     |
-| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                  | [[Cra10a]](#[Cra10a]) |
-| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)               | [[VF12]](#[VF12])     |
-| [**k-buffer**](Sources/MFR/shaders/source/k-buffer) ||
-| [KB](Sources/MFR/shaders/source/k-buffer/Fixed/Original)                     | Fixed Arrays                    | [[BCL*07]](#[BCL*07])   |
-| [KB_MULTI](Sources/MFR/shaders/source/k-buffer/Fixed/Multipass)              | Fixed Arrays (Multipass)        | [[LWXW*09]](#[LWXW*09]) |
-| [KB_SR](Sources/MFR/shaders/source/k-buffer/Fixed/Stencil_Routed)            | Fixed Arrays (Stencil-routed)   | [[BMB08b]](#[BMB08b]) |
+| [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B/Original)                 | Front-to-back (Forward)                 | [[Eve01]](#[Eve01])   |
+| [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B/Deferred)               | Front-to-back (Deferred)                | [[VF13]](#[VF13])     |
+| [F2B_ZF](Sources/MFR/shaders/source/Depth_Peeling/F2B/Z-Fighting)            | Front-to-back (Z-fighting)              | [[VF13]](#[VF13])     |
+| [DUAL](Sources/MFR/shaders/source/Depth_Peeling/DUAL)                        | Dual                                    | [[BMB08a]](#[BMB08a]) |
+| [BUN](Sources/MFR/shaders/source/Depth_Peeling/Bucket_Uniform)               | Uniform Buckets                         | [[LHLW09]](#[LHLW09]) |
+| [**A-buffer**](Sources/MFR/shaders/source/A-buffer) ||        
+| [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                            | [[YHG*10]](#[YHG*10]) |
+| [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)                   | [[VVP16a]](#[VVP16a]) |
+| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)          | [[VF13]](#[VF13])     |
+| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                          | [[Cra10a]](#[Cra10a]) |
+| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)                       | [[VF12]](#[VF12])     |
+| [**k-buffer**](Sources/MFR/shaders/source/k-buffer) ||        
+| [KB](Sources/MFR/shaders/source/k-buffer/Fixed/Original)                     | Fixed Arrays                            | [[BCL*07]](#[BCL*07])   |
+| [KB_SR](Sources/MFR/shaders/source/k-buffer/Fixed/Stencil_Routed)            | Fixed Arrays (Stencil-routed)           | [[BMB08b]](#[BMB08b])   |
+| [KB_MULTI](Sources/MFR/shaders/source/k-buffer/Fixed/Multipass)              | Fixed Arrays (Multipass)                | [[LWXW*09]](#[LWXW*09]) |
+| [KB_MDT_32](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_32)    | Fixed Arrays (Multidepth Testing 32bit) | [[MCTB13]](#[MCTB13])   |
+| [KB_MDT_64](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_64)    | Fixed Arrays (Multidepth Testing 64bit) | [[Kub14]](#[Kub14])     |
 
 <!--
 #### Sorting Solutions

@@ -30,6 +30,7 @@
 #define INSERTION_VS_SHELL	16
 
 #define KB_SIZE				8
+#define KB_SIZE_1n          KB_SIZE - 1
 #define BUCKET_SIZE			8
 #define STENCIL_SIZE		((KB_SIZE < 32) ? HEAP_SIZE : 32)
 
