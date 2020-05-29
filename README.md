@@ -43,8 +43,8 @@ compositing them in a linear traversal fashion (bottom).
 A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer and A-buffer alternatives (summarized in our recent survey [[VVP20]](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
 
 #### Data Structures
-|  Name/Location | Description | Citation |
-| ---            | ---         | ---      |
+|  Name/Location | Methodology | Citation |
+| ---            | ---               | ---      |
 | [**Depth Peeling**](Sources/MFR/shaders/source/Depth_Peeling) ||
 | [F2B](Sources/MFR/shaders/source/Depth_Peeling/F2B/Original)                 | Front-to-back (Forward)                 | [[Eve01]](#[Eve01])   |
 | [F2B_D](Sources/MFR/shaders/source/Depth_Peeling/F2B/Deferred)               | Front-to-back (Deferred)                | [[VF13]](#[VF13])     |
@@ -64,6 +64,7 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [KB_MDT_32](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_32)    | Fixed Arrays (Multidepth Testing 32bit) | [[MCTB13]](#[MCTB13])   |
 | [KB_MDT_64](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_64)    | Fixed Arrays (Multidepth Testing 64bit) | [[Kub14]](#[Kub14])     |
 | [KB_PS](Sources/MFR/shaders/source/k-buffer/Fixed/Pixel_Synchronized)        | Fixed Arrays (Pixel Synchronized)       | [[Sal13]](#[Sal13])     |
+| [KB_LL](Sources/MFR/shaders/source/k-buffer/Linked_Lists)                    | Linked Lists                            | [[YYH∗12]](#[YYH∗12])   |
 
 <!--
 #### Sorting Solutions
@@ -152,6 +153,6 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
 - <a name="[YHG*10]">[YHG*10] </a>Yang et al., "Real-time concurrent linked list construction on the GPU", CGF (EGSR'10), 2010.
 - <a name="[Cra10a]">[Cra10a] </a>Crassin, "Fast and accurate single-pass A-buffer", Blog post, 2010.
 - <a name="[Cra10b]">[Cra10b] </a>Crassin, "Linked lists of fragment pages", Blog post, 2010.
-- <a name="[VF12]">  [VF12]  </a>Vasilakis and Fudos, "S-buffer: Sparsity-aware multifragment rendering", EG (Short Papers), 2012.
+- <a name="[VF12]">  [VF12]   </a>Vasilakis and Fudos, "S-buffer: Sparsity-aware multifragment rendering", EG (Short Papers), 2012.
 - <a name="[VVP16a]">[VVP16a] </a>Vardis et al., "A Multiview and Multilayer Approach for Interactive Ray Tracing", I3D, 2016.
 - <a name="[VVP16b]">[VVP16b] </a>Vardis et al., "DIRT: Deferred Image-based Ray Tracing", HPG, 2016.
