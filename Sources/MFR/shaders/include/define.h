@@ -21,16 +21,12 @@
 
 #define MAX_ITERATIONS		200
 
-#define HEAP_SIZE			8	
-#define HEAP_SIZE_1p		HEAP_SIZE + 1
-#define HEAP_SIZE_1n		HEAP_SIZE - 1
-#define HEAP_SIZE_2d		HEAP_SIZE >> 1
-#define HEAP_SIZE_LOG2		log2(HEAP_SIZE)
 #define ARRAY_VS_HEAP		16
 #define INSERTION_VS_SHELL	16
 
 #define KB_SIZE				8
 #define KB_SIZE_1n          KB_SIZE - 1
+#define KB_SIZE_LOG2		log2(KB_SIZE)
 #define BUCKET_SIZE			8
 #define STENCIL_SIZE		((KB_SIZE < 32) ? HEAP_SIZE : 32)
 

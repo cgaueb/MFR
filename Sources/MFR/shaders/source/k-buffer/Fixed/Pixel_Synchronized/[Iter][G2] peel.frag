@@ -29,9 +29,8 @@ layout(binding = 0, rg32f) coherent uniform image2DArray in_image_peel_data;
 #if !(INTEL_ordering | NV_interlock)
 layout(binding = 1, r32ui) coherent uniform uimage2DRect in_image_semaphore;
 // Helpful functions
-bool  semaphoreAcquire() { return (imageLoad (image_semaphore, ivec2(gl_FragCoord.xy)).r == 1U) ? false :
-									imageAtomicExchange (image_semaphore, ivec2(gl_FragCoord.xy), 1U)==0U; }
-void  semaphoreRelease() {		   imageStore(image_semaphore, ivec2(gl_FragCoord.xy), uvec4(0U));}
+bool  semaphoreAcquire() { return  imageAtomicExchange  (in_image_semaphore, ivec2(gl_FragCoord.xy), 1U)==0U;}
+void  semaphoreRelease() {		   imageStore			(in_image_semaphore, ivec2(gl_FragCoord.xy), uvec4(0U));}
 #endif 
 
 void insertFragmentArrayIns(float C)

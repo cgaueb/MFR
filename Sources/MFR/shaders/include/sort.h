@@ -16,7 +16,7 @@ void sort_insert(const int num)
 	}
 }
 
-void sort	   (const int num)
+void sort(const int num)
 {
 	sort_insert(num);
 }

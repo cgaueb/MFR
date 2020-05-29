@@ -7,23 +7,19 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "k-buffer" method as described in 
-// "Bavoil et al., Multi-fragment Effects on the GPU Using the k-buffer, I3D, 2007".
+// Implementation of "k+-buffer (max array)" method as described in 
+// "Vasilakis, Fudos, k+-buffer: Fragment Synchronized k-buffer, I3D, 2014".
 //
-// [Iter][S2] -> 2nd Pass (Screen-space) executed optionally in each iteration.
+// [Iter][S1] -> 1st Pass (Screen-space) executed in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"
 
-// Input Variables
-uniform int layer;
-layout(binding = 0) uniform  sampler2DArray in_tex_peel_data;
-
 // Output Variables
-layout(location = 0, index = 0) out vec4 	out_frag_color;
+layout(binding = 1, rg32f) writeonly uniform image2DArray out_image_peel_data;
 
 void main(void)
 {
-	// Return the color value of the specific fragment
-	out_frag_color = unpackUnorm4x8(floatBitsToUint(texelFetch(in_tex_peel_color, ivec3(gl_FragCoord.xy, layer), 0).r));
+	// Initialize depth value of the max fragment
+	imageStore(out_image_peel, ivec3(gl_FragCoord.xy, 0), vec4(1.0f));
 }

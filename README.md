@@ -66,6 +66,8 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [KB_PS](Sources/MFR/shaders/source/k-buffer/Fixed/Pixel_Synchronized)        | Fixed Arrays (Pixel Synchronized)       | [[Sal13]](#[Sal13])     |
 | [KB_MDT_32](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_32)    | Fixed Arrays (Multidepth Testing 32bit) | [[MCTB13]](#[MCTB13])   |
 | [KB_MDT_64](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_64)    | Fixed Arrays (Multidepth Testing 64bit) | [[Kub14]](#[Kub14])     |
+| [KB_MAX_ARRAY](Sources/MFR/shaders/source/k-buffer/Fixed/Max_Array)          | Fixed Arrays (Max Array)                | [[VF14]](#[VF14])       |
+| [KB_MAX_HEAP](Sources/MFR/shaders/source/k-buffer/Fixed/Max_Heap)            | Fixed Arrays (Max Heap)                 | [[VF14]](#[VF14])       |
 
 <!--
 #### Sorting Solutions

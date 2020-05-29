@@ -10,7 +10,7 @@
 // Implementation of "k-buffer" method as described in 
 // "Bavoil et al., Multi-fragment Effects on the GPU Using the k-buffer, I3D, 2007".
 //
-// [Iter][G3] -> 3rd Pass (Screen-space) executed optionally in each iteration, in case multiple
+// [Iter][S3] -> 3rd Pass (Screen-space) executed optionally in each iteration, in case multiple
 // passes are needed
 //-----------------------------------------------------------------------------------------------
 

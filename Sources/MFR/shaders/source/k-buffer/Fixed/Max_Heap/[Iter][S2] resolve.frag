@@ -7,37 +7,33 @@
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Implementation of "Stencil-routed k-buffer" method as described in 
-// "Bavoil, Myres, Deferred Rendering using a Stencil Routed k-Buffer, ShaderX6, 2008".
+// Implementation of "k+-buffer (max array)" method as described in 
+// "Vasilakis, Fudos, k+-buffer: Fragment Synchronized k-buffer, I3D, 2014".
 //
-// [Iter][S2] -> 2nd Pass (Screen-space) executed in each iteration.
+// [Iter][S3] -> 3rd Pass (Screen-space) executed optionally in each iteration.
 //-----------------------------------------------------------------------------------------------
 
 #include "define.h"
 #include "sort.h"
 
 // Input Variables
-uniform int	layer;
-
-layout(binding = 0) uniform  sampler2DMS in_tex_peel_data;
+int layer;
+layout(binding = 0, r32ui) readonly uniform uimage2DRect  in_image_counter;
+layout(binding = 1, rg32f) readonly uniform  image2DArray in_image_peel_data;
 
 // Output Variables
 layout(location = 0, index = 0) out vec4 out_frag_color;
 
 void main(void)
 {
-	// Store fragment data values to a local array
-	int count=0;
-	for(int i=0; i<STENCIL_SIZE; i++)
-	{
-		vec2 data = texelFetch(in_tex_peel_data, ivec2(gl_FragCoord.xy), i).rg;
-		if(data.g == 1.0f)
-			break;
-		fragments[count++] = data;
-	}
-	
+	// Get pixel fragments counter
+	int count = int(imageLoad(in_image_counter, ivec2(gl_FragCoord.xy)).r);
 	if(count == 0)
 		discard;
+
+	// Store fragment data values to a local array
+	for(int i=0; i<KB_SIZE; i++)
+		fragments[i] = imageLoad(in_image_peel_data, ivec3(gl_FragCoord.xy, i)).rg;
 
 	// Sort fragments by their depth
 	sort(count);

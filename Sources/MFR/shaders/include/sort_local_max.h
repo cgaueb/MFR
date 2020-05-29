@@ -6,7 +6,7 @@
 #define SORT_BUBBLE			0	// n		// n^2			// n^2
 //		SORT_HEAP			0	// n(logn)	// n(logn)		// n(logn)
 
-vec2 fragments	[HEAP_SIZE];
+vec2 fragments	[LOCAL_SIZE];
 
 #if !trimless
 
@@ -38,7 +38,7 @@ vec2 fragments	[HEAP_SIZE];
 #endif
 
 #if SORT_MERGE
-	vec2 leftArray[HEAP_SIZE_2d];
+	vec2 leftArray[LOCAL_SIZE_2d];
 
 	void merge(int steps, int a, int b, int c)
 {
