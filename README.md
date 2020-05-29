@@ -86,6 +86,7 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 - Vasilakis A. A., Vardis K., Papaioannou G., '*[A Survey of Multifragment Rendering](https://diglib.eg.org/handle/10.1111/cgf14019)*', Computer Graphics Forum (Eurographics 2020 - STAR Papers). 
 <a href="Multimedia\EG2020_STAR_paper.pdf"> <img alt="EG 2020 paper pdf" src="Figures\pdf.png" width="25"> </a>
 <a href="Multimedia\EG2020_STAR_presentation.pptx"> <img alt="EG 2020 presentation" src="Figures\pptx.png" width="25"> </a>
+<a href="https://youtu.be/bxX8BVxfbYA"> <img alt="EG 2020 video" src="Figures\video.png" width="25"> </a>
 - Vasilakis A. A., Vardis K., Papaioannou G. and Moustakas K.,'*[Variable k-buffer using Importance Maps](https://diglib.eg.org/handle/10.2312/egsh20171005)*', Eurographics 2017 - Short Papers. <a href="Multimedia\EG2017_SP_paper.pdf"> <img alt="EG 2017 paper pdf" src="Figures\pdf.png" width="25"></a> 
 <a href="Multimedia\EG2017_SP_presentation.pptx"> <img alt="EG 2017 presentation" src="Figures\pptx.png" width="25"> </a>
 - Vardis K., Vasilakis A. A., Papaioannou G., '*[DIRT: Deferred Image-based Ray Tracing](http://diglib.eg.org/handle/10.2312/hpg20161193)*', High-Performance Graphics 2016.
