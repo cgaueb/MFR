@@ -61,10 +61,11 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [KB](Sources/MFR/shaders/source/k-buffer/Fixed/Original)                     | Fixed Arrays                            | [[BCL*07]](#[BCL*07])   |
 | [KB_SR](Sources/MFR/shaders/source/k-buffer/Fixed/Stencil_Routed)            | Fixed Arrays (Stencil-routed)           | [[BMB08b]](#[BMB08b])   |
 | [KB_MULTI](Sources/MFR/shaders/source/k-buffer/Fixed/Multipass)              | Fixed Arrays (Multipass)                | [[LWXW*09]](#[LWXW*09]) |
+| [KB_AB_LL](Sources/MFR/shaders/source/k-buffer/Fixed/AB_Linked_Lists)        | Fixed Arrays (A-buffer, Linked Lists)   | [[SML11]](#[SML11])     |
+| [KB_LL](Sources/MFR/shaders/source/k-buffer/Linked_Lists)                    | Linked Lists                            | [[YYH∗12]](#[YYH∗12])   |
+| [KB_PS](Sources/MFR/shaders/source/k-buffer/Fixed/Pixel_Synchronized)        | Fixed Arrays (Pixel Synchronized)       | [[Sal13]](#[Sal13])     |
 | [KB_MDT_32](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_32)    | Fixed Arrays (Multidepth Testing 32bit) | [[MCTB13]](#[MCTB13])   |
 | [KB_MDT_64](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_64)    | Fixed Arrays (Multidepth Testing 64bit) | [[Kub14]](#[Kub14])     |
-| [KB_PS](Sources/MFR/shaders/source/k-buffer/Fixed/Pixel_Synchronized)        | Fixed Arrays (Pixel Synchronized)       | [[Sal13]](#[Sal13])     |
-| [KB_LL](Sources/MFR/shaders/source/k-buffer/Linked_Lists)                    | Linked Lists                            | [[YYH∗12]](#[YYH∗12])   |
 
 <!--
 #### Sorting Solutions
@@ -139,6 +140,7 @@ In our work, we have used the shader source code~\cite{VVP_EG_2020_STAR}, availa
 - <a name="[BCL*07]">[BCL*07]  </a> Bavoil et al., "Multi-fragment Effects on the GPU Using the k-buffer", I3D, 2007.
 - <a name="[BM08b]"> [BM08b]   </a> Bavoil and Myers, "Deferred Rendering using a Stencil Routed k-Buffer", ShaderX6: Advanced Rendering Techniques, 2008.
 - <a name="[LWXW*09]">[LWXW*09]</a> Liu et al., "Multi-layer depth peeling via fragment sort", CAD&CG, 2009.
+- <a name="[SML11]"> [SML11]   </a> Salvi et al., "Adaptive Transparency", HPG, 2011.
 - <a name="[YYH∗12]">[YYH∗12]  </a> Yu et al., "A Framework for Rendering Complex Scattering Effects on Hair", I3D, 2012.
 - <a name="[MCTB13]">[MCTB13]  </a> Maule et al., "Hybrid Transparency", I3D, 2013.
 - <a name="[Sal13]"> [Sal13]   </a> Salvi, "Advances in Real-Time Rendering in Games: Pixel Synchronization: Solving old graphics problems with new data structures", SIGGRAPH Courses, 2013.
