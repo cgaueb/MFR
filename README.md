@@ -9,7 +9,6 @@ The main advantage of these approaches is that they encompass additional rasteri
 ![Image description](Figures/teaser.png)
 **Figure 1.** Multifragment rendering has been deployed in a wide spectrum of rendering applications in order to generate compelling graphics effects at interactive frame rates.
 
-
 ### Table of Contents
 
 - [Aim](#Aim)
@@ -40,9 +39,10 @@ compositing them in a linear traversal fashion (bottom).
 
 ### GLSL Source Code
 
-A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer and A-buffer alternatives (summarized in our recent survey [[VVP20]](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3).
+A comprehensive shader source code bundle for efficiently solving the visibility determination problem in screen space is provided. This extensive collection includes the most widely-used multi-fragment rendering solutions such as the depth peeling variants as well as k-buffer and A-buffer alternatives (summarized in our recent survey [[VVP20]](#[VVP20])). The source code is mainly written using the OpenGL 4.4 API, except from the parts that do not require GPU-accelerated atomic memory operations (OpenGL 3.3). 
 
-#### Data Structures
+<a name="Table1">**Table 1.** List of multifragment data structures</a>
+
 |  Name/Location | Methodology | Citation |
 | ---            | ---               | ---      |
 | [**Depth Peeling**](Sources/MFR/shaders/source/Depth_Peeling) ||
@@ -54,9 +54,9 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [**A-buffer**](Sources/MFR/shaders/source/A-buffer) ||        
 | [AB_LL](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Original)           | Linked-Lists                            | [[YHG*10]](#[YHG*10]) |
 | [AB_LL_D](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Double)           | Linked-Lists (Double)                   | [[VVP16a]](#[VVP16a]) |
-| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Buckets)          | [[VF13]](#[VF13])     |
-| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Arrays (Fixed)                          | [[Cra10a]](#[Cra10a]) |
-| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Arrays (Variable)                       | [[VF12]](#[VF12])     |
+| [AB_LL_BUN](Sources/MFR/shaders/source/A-buffer/Linked_Lists/Bucket_Uniform) | Linked-Lists (Uniform Bins)             | [[VF13]](#[VF13])     |
+| [AB_AF](Sources/MFR/shaders/source/A-buffer/Arrays/Fixed)                    | Fixed Arrays                            | [[Cra10a]](#[Cra10a]) |
+| [AB_AV](Sources/MFR/shaders/source/A-buffer/Arrays/Variable)                 | Variable Arrays                         | [[VF12]](#[VF12])     |
 | [**k-buffer**](Sources/MFR/shaders/source/k-buffer) ||        
 | [KB](Sources/MFR/shaders/source/k-buffer/Fixed/Original)                     | Fixed Arrays                            | [[BCL*07]](#[BCL*07])   |
 | [KB_SR](Sources/MFR/shaders/source/k-buffer/Fixed/Stencil_Routed)            | Fixed Arrays (Stencil-routed)           | [[BM08a]](#[BM08a])   |
@@ -68,6 +68,31 @@ A comprehensive shader source code bundle for efficiently solving the visibility
 | [KB_MDT_64](Sources/MFR/shaders/source/k-buffer/Fixed/Multidepth_Test_64)    | Fixed Arrays (Multidepth Testing 64bit) | [[Kub14]](#[Kub14])     |
 | [KB_MAX_ARRAY](Sources/MFR/shaders/source/k-buffer/Fixed/Max_Array)          | Fixed Arrays (Max Array)                | [[VF14]](#[VF14])       |
 | [KB_MAX_HEAP](Sources/MFR/shaders/source/k-buffer/Fixed/Max_Heap)            | Fixed Arrays (Max Heap)                 | [[VF14]](#[VF14])       |
+
+#### Image-space Ray Tracing
+The tables below link to shader implementations of various A-buffer data structures tailored to image-space ray tracing.
+The additional characteristics of these implementations:
+- Exploiting larger shading blocks for storing **shading data** (albedo, normals, etc.)
+- Using **linear-Z** for storing and sorting the fragments.
+- Visibility and shading data are **decoupled**, i.e. stored in separate buffers, to improve sorting and traversal.
+- Support for **multiple** views. Here, it is provided only for the **optimal** data structures, with respect to performance.
+
+<a name="Table2">**Table 2.** List of single-view multifragment data structures for ray tracing</a>
+
+|  Name/Location | Type | Characteristics | Original Method | Implemented in |
+| ---            | ---               | ---      | ---      | ---      |
+| [AB_LL](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_LL)           | Linked-Lists                          | [Yes](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_LL_Decoupled)        | [[YHG*10]](#[YHG*10]) | [[VVP16a]](#[VVP16a]) |
+| [AB_LL_BUN](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_LL_BUN)   | Linked-Lists (Uniform Bins)           | [Yes](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_LL_BUN_Decoupled)    | [[VF13]](#[VF13])     | [[VVP16a]](#[VVP16a]) |
+| [AB_LLD](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_LLD)         | Linked-Lists (Double)                 | [Yes](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_LLD_Decoupled)       | [[VVP16a]](#[VVP16a]) | [[VVP16a]](#[VVP16a]) |
+| [AB_LLD_BUN](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_LLD_BUN) | Linked-Lists (Double - Uniform Bins)  | [Yes](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_LLD_BUN_Decoupled)   | [[VVP16a]](#[VVP16a]) | [[VVP16a]](#[VVP16a]) |
+| [AB_SB](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_SB)           | Arrays (Variable)                     | [Yes](Sources/MMRT/GLSL/A-buffer%20Shaders/AB_SB_Decoupled)        | [[VF12]](#[VF12])     | [[VVP16a]](#[VVP16a]) |
+
+<a name="Table3">**Table 3.** List of multi-view multifragment data structures for ray tracing</a>
+
+|  Intersections on | Data Structure | Application | Citation |
+| ---            | ---                  | ---      |   ---      |
+| [Fragments](Sources/MMRT/GLSL/Cubemap%20Shaders)          | Linked-Lists (Double - Uniform Bins - Decoupled) | Path Tracing - Ambient Occlusion | [[VVP16a]](#[VVP16a]) |
+| [Primitives](Sources/DIRT)                                | Linked-Lists (Uniform Bins - Decoupled)          | Path Tracing                     | [[VVP16b]](#[VVP16b]) |
 
 <!--
 #### Sorting Solutions
