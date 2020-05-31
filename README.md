@@ -91,7 +91,7 @@ The additional characteristics of these implementations:
 
 |  Intersections on | Data Structure | Application | Citation |
 | ---            | ---                  | ---      |   ---      |
-| [Fragments](Sources/MMRT/GLSL/Cubemap%20Shaders)          | Linked-Lists (Double - Uniform Bins - Decoupled) | Path Tracing - Ambient Occlusion | [[VVP16a]](#[VVP16a]) |
+| [Fragments](Sources/MMRT)          | Linked-Lists (Double - Uniform Bins - Decoupled) | Path Tracing - Ambient Occlusion | [[VVP16a]](#[VVP16a]) |
 | [Primitives](Sources/DIRT)                                | Linked-Lists (Uniform Bins - Decoupled)          | Path Tracing                     | [[VVP16b]](#[VVP16b]) |
 
 <!--
