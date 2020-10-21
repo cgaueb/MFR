@@ -111,6 +111,8 @@ The additional characteristics of these implementations:
 
 - Evangelou I., Papaioannou G., Vardis K., Vasilakis A. A., '*[Rasterization-based Progressive Photon Mapping](https://link.springer.com/article/10.1007/s00371-020-01897-3)*', The Visual Computer (Computer Graphics International 2020). 
 <a href="https://link.springer.com/content/pdf/10.1007/s00371-020-01897-3.pdf"> <img alt="VC 2020 paper pdf" src="Figures\pdf.png" width="25"> </a>
+<a href="Multimedia\CGI2020_presentation.pptx"> <img alt="CGI 2020 presentation" src="Figures\pptx.png" width="25"> </a>
+<a href="https://youtu.be/"> <img alt="CGI 2020 video" src="Figures\video.png" width="25"> </a>
 - Vasilakis A. A., Vardis K., Papaioannou G., '*[A Survey of Multifragment Rendering](https://diglib.eg.org/handle/10.1111/cgf14019)*', Computer Graphics Forum (Eurographics 2020 - STAR Papers). 
 <a href="Multimedia\EG2020_STAR_paper.pdf"> <img alt="EG 2020 paper pdf" src="Figures\pdf.png" width="25"> </a>
 <a href="Multimedia\EG2020_STAR_presentation.pptx"> <img alt="EG 2020 presentation" src="Figures\pptx.png" width="25"> </a>
